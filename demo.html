@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta charset="utf-8">
@@ -7,11 +7,28 @@
 		<link rel="stylesheet" href="css/demo.css">
 	</head>
 	<body>
-		<div id="lander">
-			<div id="main">
-				<p>What do you identify as?</p>
-				<input type="text" placeholder="Specify here">
+		<div class="header">
+			<div class="langs">
+				<img class="no change-lang" alt="Det norske flagget" src="img/norwegian-flag.png">
+				<img class="no change-lang" alt="De forente staters flagg" src="img/us-flag.png">
+				<img class="en change-lang" alt="The Norwegian flag" src="img/norweigan-flag.png">
+				<img class="en change-lang" alt="The US flag" src="img/us-flag.png">
 			</div>
+		</div>
+		<div id="lander">
+			<section id="main">
+				<h1>GenderAll</h1>
+				<p class="no">GenderAll tilrettelegger for at alle mennesker skal kunne uttrykke sitt eget kjønn på Internett.</p>
+				<p class="en">GenderAll enables all people to express their own gender on the Internet.</p>
+				<input class="no" type="text" placeholder="Skriv inn ditt kjønn...">
+				<input class="en" type="text" placeholder="Enter your gender...">
+				<ul class="en gender-list">
+
+				</ul>
+				<ul class="no gender-list">
+					
+				</ul>
+			</section>
 		</div>
 		<script src="js/index.js"></script>
 	</body>
