@@ -1,7 +1,7 @@
 (function() {
 	var changeLangEls = document.getElementsByClassName('langs')[0].children;
 	var handler = function(){
-		var lang = String.prototype.split.call(this.classList, ' ').contains('no') ? 'no' : 'en';
+		var lang = String.prototype.split.call(this.classList, ' ').includes('no') ? 'no' : 'en';
 		for (var i = 0; i < changeLangEls.length; i += 1) {
 			changeLangEls[i].classList.remove('selected');
 		}
@@ -19,11 +19,13 @@
 	// Gender input control
 	var genderInput = document.getElementById('gender-input');
 	var genderList = document.getElementById('gender-list');
-	var filter = function(list, predicate) {
+	var filter = function(list, predicate, exclusions) {
 		var res = [];
 		for (var i = 0, len = list.length; i < len; i += 1) {
 			var item = list[i];
-			if (predicate(item)) {
+			if (exclusions.includes(item.innerHTML)) {
+				res.push(item);
+			} else if (predicate(item)) {
 				res.push(item);
 			}
 		}
@@ -53,11 +55,15 @@
 		}
 		var list = genderList.children;
 		var showThese = filter(list, function(val) {
-			return val.innerHTML.toLowerCase().includes(genderInput.value.toLowerCase());
-		});
+			var html = val.innerHTML.toLowerCase();
+			var inputValue = genderInput.value.toLowerCase();
+			return html.includes(inputValue);
+		}, ['Custom...']);
 		var hideThese = filter(list, function(val) {
-			return !val.innerHTML.toLowerCase().includes(genderInput.value.toLowerCase());
-		});
+			var html = val.innerHTML.toLowerCase();
+			var inputValue = genderInput.value.toLowerCase();
+			return !html.includes(inputValue);
+		}, ['Custom...']);
 		hideThese.forEach(function(el) {
 			setDisplay(el, 'none');
 		});
