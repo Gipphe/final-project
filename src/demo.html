@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta charset="utf-8">
@@ -9,27 +9,53 @@
 	<body>
 		<div class="header">
 			<div class="langs">
-				<img class="no change-lang" alt="Det norske flagget" src="img/norwegian-flag.png">
-				<img class="no change-lang" alt="De forente staters flagg" src="img/us-flag.png">
-				<img class="en change-lang" alt="The Norwegian flag" src="img/norweigan-flag.png">
+				<img class="en change-lang" alt="The Norwegian flag" src="img/norwegian-flag.png">
 				<img class="en change-lang" alt="The US flag" src="img/us-flag.png">
 			</div>
+		</div>
+		<div id="page-map">
+
 		</div>
 		<div id="lander">
 			<section id="main">
 				<h1>GenderAll</h1>
-				<p class="no">GenderAll tilrettelegger for at alle mennesker skal kunne uttrykke sitt eget kjønn på Internett.</p>
 				<p class="en">GenderAll enables all people to express their own gender on the Internet.</p>
-				<input class="no" type="text" placeholder="Skriv inn ditt kjønn...">
-				<input class="en" type="text" placeholder="Enter your gender...">
-				<ul class="en gender-list">
-
+				<input id="gender-input" class="en" type="text" placeholder="Enter your gender..."><br>
+				<ul id="gender-list" class="en">
+					<li>5+gender</li>
+					<li>Agender</li>
+					<li>Androgyne</li>
+					<li>Bigender</li>
+					<li>Cis-man</li>
+					<li>Cis-woman</li>
+					<li>Demiandrogyne</li>
+					<li>Demiboy</li>
+					<li>Demigirl</li>
+					<li>Gender fluid</li>
+					<li>Hijra</li>
+					<li>Intersex</li>
+					<li>Man</li>
+					<li>Neutrois</li>
+					<li>Pangender</li>
+					<li>Quadgender</li>
+					<li>Pocket/Other</li>
+					<li>Trans-man (FtM)</li>
+					<li>Trans-woman (MtF)</li>
+					<li>Trigender</li>
+					<li>Two-Spirit</li>
+					<li>Woman</li>
+					<li>Custom...</li>
 				</ul>
-				<ul class="no gender-list">
-					
-				</ul>
+				<div class="next">
+					<a href="#sign-up">Next</a>
+				</div>
+			</section>
+			<section id="sign-up">
+				<h1>Create account</h1>
+				<p class="en"></p>
+				<input class="en" type="range" placeholder="">
 			</section>
 		</div>
-		<script src="js/index.js"></script>
+		<script src="js/demo.js"></script>
 	</body>
 </html>
