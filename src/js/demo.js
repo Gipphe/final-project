@@ -45,6 +45,7 @@
 		genderInput.value = e.target.innerHTML;
 		hideList();
 	});
+	genderInput.addEventListener('click', showList);
 	genderInput.addEventListener('focusin', showList);
 	genderInput.addEventListener('input', function(e) {
 		e.stopPropagation();

@@ -34,9 +34,6 @@ section {
 	width: 60vw;
 	text-align: center;
 }
-section * {
-	margin: 5% 0;
-}
 section h1 {
 	font-size: 600%;
 	font-family: 'Manifesto', 'Raleway', sans-serif;
@@ -44,7 +41,7 @@ section h1 {
 }
 section p {
 	font-size: 130%;
-	margin: 1.5em 0 3em;
+	margin: 30px 0 50px;
 }
 
 /* Section text input
@@ -57,7 +54,7 @@ section input[type=text] {
 	color: #333;
 	font-size: 120%;
 	margin: 0;
-	padding: 0.75rem 1.25rem;
+	padding: 10px 20px;
 	width: 300px;
 }
 
@@ -87,7 +84,7 @@ section input[type=text] {
 	box-sizing: border-box;
 	list-style: none;
 	text-align: left;
-	padding: 0 1.25rem;
+	padding: 2px 20px;
 	margin: 0;
 	cursor: pointer;
 }
@@ -101,14 +98,14 @@ section input[type=text] {
 .next a {
 	width: 70px;
 	height: 36px;
-	line-height: 30px;
+	line-height: 36px;
 }
 .next {
 	box-sizing: border-box;
-	position: absolute;
-	bottom: 0;
+	position: fixed;
+	bottom: 30%;
+	right: 20%;
 	padding: 3px 10px;
-	right: 30%;
 	border-radius: 2px;
 	transition: text-shadow .3s, color .3s;
 	background-color: #eee;
