@@ -25,19 +25,28 @@ body {
 	width: 100vw;
 	overflow: hidden;
 }
+#lander .slide {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
 
 /* Sections
 ------------ */
 section {
-	margin: 30vh auto;
 	height: 40vh;
 	width: 60vw;
 	text-align: center;
 }
 section h1 {
-	font-size: 600%;
+	font-size: 300%;
 	font-family: 'Manifesto', 'Raleway', sans-serif;
 	margin: 0;
+}
+div#main section h1 {
+	font-size: 600%;
 }
 section p {
 	font-size: 130%;
@@ -56,6 +65,48 @@ section input[type=text] {
 	margin: 0;
 	padding: 10px 20px;
 	width: 300px;
+}
+
+/* Controls
+------------ */
+#controls {
+	position: fixed;
+	bottom: 30vh;
+	left: 20vw;
+	width: 60vw;
+}
+#controls #back,
+#controls #next {
+	position: absolute;
+	top: 0;
+
+	background-color: #eee;
+	border-radius: 2px;
+	box-sizing: content-box;
+	color: #888;
+	cursor: pointer;
+	height: 32px;
+	line-height: 32px;
+	padding: 3px 10px;
+	text-align: center;
+	transition: text-shadow .3s, color .3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 64px;
+}
+#controls #back {
+	left: 0;
+}
+#controls #next {
+	right: 0;
+}
+#controls #back:hover,
+#controls #next:hover {
+	color: #333;
+	text-decoration: inherit;
+	text-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 /* Gender selection box
@@ -92,47 +143,119 @@ section input[type=text] {
 	background-color: rgba(0,0,0,0.3);
 }
 
-/* Next-button
+/* Sign-up
 ------------ */
-.next,
-.next a {
-	width: 70px;
-	height: 36px;
-	line-height: 36px;
-}
-.next {
-	box-sizing: border-box;
-	position: fixed;
-	bottom: 30%;
-	right: 20%;
-	padding: 3px 10px;
-	border-radius: 2px;
-	transition: text-shadow .3s, color .3s;
-	background-color: #eee;
-	color: #888;
+#gender-graph,
+#gender-graph * {
 	cursor: pointer;
 }
-.next a {
+#gender-graph {
+	position: relative;
+	margin: 30px auto;
+	height: 200px;
+	width: 300px;
+}
+#gender-graph input[type="range"],
+#gender-graph .label {
 	position: absolute;
+	margin: 0;
+}
+#gender-graph input[type="range"]::-moz-range-track {
+  padding: 0 10px;
+  background: repeating-linear-gradient(to right, 
+    #ccc, 
+    #ccc 10%, 
+    #000 10%, 
+    #000 11%, 
+    #ccc 11%, 
+    #ccc 20%);
+}
+#gender-graph .gender-slider {
+	display: none;
+}
+/*#gender-graph #gender-range-horizontal,
+#gender-graph #gender-range-vertical {
+	pointer-events: none;
+}*/
+#gender-graph #gender-range-horizontal {
+	left: 50%;
+	height: 20px;
+	width: 290px;
+	transform: translateX(-50%);
+}
+#gender-graph #gender-range-vertical {
+	height: 20px;
+	width: 190px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) translateY(-5px) rotate(270deg);
 }
-.next a,
-.next a:hover,
-.next a:visited {
-	color: inherit;
-	text-decoration: inherit
+/*#gender-graph #gender-range-vertical,*/
+#gender-graph .label#max-intense,
+#gender-graph .label#min-intense {
 }
-.next:hover {
-	color: #333;
-	text-shadow: 0 0 5px rgba(0,0,0,0.3);
+#gender-graph .label#max-intense,
+#gender-graph .label#min-intense {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+#gender-graph .label#max-intense {
+	bottom: 102%;
+}
+#gender-graph .label#min-intense {
+	top: 102%;
+}
+#gender-graph #gender-range-horizontal,
+#gender-graph .label#man,
+#gender-graph .label#woman {
+	bottom: 0;
+}
+#gender-graph .label#man {
+	right: 102%;
+}
+#gender-graph .label#woman {
+	left: 102%;
+}
+#gender-graph #graph {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+#gender-graph #cursor {
+	color: blue;
+	height: 19px;
+	width: 19px;
+	margin: 0;
+	padding: 0;
+	display: none;
+	position: absolute;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-mox-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#graph .grid {
+	stroke: #ccc;
+	stroke-dasharray: 0;
+	stroke-width: 1;
+}
+
+/* Page map
+------------ */
+#page-map {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
 }
 
 /* Header
 ------------ */
 .header,
-.header .langs {
+.header #langs {
 	height: 30px;
 }
 .header {
@@ -141,12 +264,12 @@ section input[type=text] {
 	left: 0;
 	width: 100%;
 }
-.header .langs {
+.header #langs {
 	position: absolute;
 	right: 0;
 	top: 0;
 }
-.header .langs img {
+.header #langs img {
 	height: 30px;
 }
 
@@ -156,4 +279,3 @@ html[lang=no] .en,
 html[lang=en] .no {
     display: none !important;
 }
-

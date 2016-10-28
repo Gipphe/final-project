@@ -8,53 +8,112 @@
 	</head>
 	<body>
 		<div class="header">
-			<div class="langs">
-				<img class="en change-lang" alt="The Norwegian flag" src="img/norwegian-flag.png">
-				<img class="en change-lang" alt="The US flag" src="img/us-flag.png">
+			<div id="langs">
+				<img id="no" class="en change-lang" alt="The Norwegian flag" src="img/norwegian-flag.png">
+				<img id="en" class="en change-lang" alt="The US flag" src="img/us-flag.png">
 			</div>
 		</div>
 		<div id="page-map">
 
 		</div>
 		<div id="lander">
-			<section id="main">
-				<h1>GenderAll</h1>
-				<p class="en">GenderAll enables all people to express their own gender on the Internet.</p>
-				<input id="gender-input" class="en" type="text" placeholder="Enter your gender..."><br>
-				<ul id="gender-list" class="en">
-					<li>5+gender</li>
-					<li>Agender</li>
-					<li>Androgyne</li>
-					<li>Bigender</li>
-					<li>Cis-man</li>
-					<li>Cis-woman</li>
-					<li>Demiandrogyne</li>
-					<li>Demiboy</li>
-					<li>Demigirl</li>
-					<li>Gender fluid</li>
-					<li>Hijra</li>
-					<li>Intersex</li>
-					<li>Man</li>
-					<li>Neutrois</li>
-					<li>Pangender</li>
-					<li>Quadgender</li>
-					<li>Pocket/Other</li>
-					<li>Trans-man (FtM)</li>
-					<li>Trans-woman (MtF)</li>
-					<li>Trigender</li>
-					<li>Two-Spirit</li>
-					<li>Woman</li>
-					<li id="custom">Custom...</li>
-				</ul>
-				<div class="next">
-					<a href="#sign-up">Next</a>
+			<div id="main" class="slide">
+				<section>
+					<h1>GenderAll</h1>
+					<p class="en">GenderAll enables all people to express their own gender on the Internet.</p>
+					<input id="gender-input" class="en" type="text" placeholder="Enter your gender..."><br>
+					<ul id="gender-list" class="en">
+						<li>5+gender</li>
+						<li>Agender</li>
+						<li>Androgyne</li>
+						<li>Bigender</li>
+						<li>Cis-man</li>
+						<li>Cis-woman</li>
+						<li>Demiandrogyne</li>
+						<li>Demiboy</li>
+						<li>Demigirl</li>
+						<li>Gender fluid</li>
+						<li>Hijra</li>
+						<li>Intersex</li>
+						<li>Man</li>
+						<li>Neutrois</li>
+						<li>Pangender</li>
+						<li>Quadgender</li>
+						<li>Pocket/Other</li>
+						<li>Trans-man (FtM)</li>
+						<li>Trans-woman (MtF)</li>
+						<li>Trigender</li>
+						<li>Two-Spirit</li>
+						<li>Woman</li>
+						<li id="custom">Custom...</li>
+					</ul>
+				</section>
+			</div>
+			<div id="sign-up" class="slide">
+				<section>
+					<h1>Specify your gender</h1>
+					<div id="gender-graph">
+						<svg id="graph" xmlns="http://www.w3.org/2000/svg">
+							<g class="grid x-grid">
+								<line id="x-line" x1="150" y1="5" x2="150" y2="195"></line>
+							</g>
+							<g class="grid y-grid">
+								<line id="y-line" x1="5" y1="190" x2="295" y2="190"></line>
+							</g>
+							<defs>
+								<pattern id="small-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+									<path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5" />
+								</pattern>
+								<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+									<rect width="100" height="100" fill="url(#small-grid" />
+								</pattern>
+							</defs>
+							<rect width="100%" height="100%" fill="url(#grid)" />
+						</svg>
+						<img id="cursor" alt="cross mark cursor" src="img/cursor.png"></img>
+						<div class="label" id="man">Man</div>
+						<div class="label" id="woman">Woman</div>
+						<div class="label" id="max-intense">Intense</div>
+						<div class="label" id="min-intense">Not intense</div>
+						<input id="gender-range-vertical" class="gender-slider" type="range" min="0" max="100" step="5" list="steplist">
+						<input id="gender-range-horizontal" class="gender-slider" type="range" min="-50" max="50" step="5" list="steplist">
+						<datalist id="steplist">
+							<option>-100</option>
+							<option>-90</option>
+							<option>-80</option>
+							<option>-70</option>
+							<option>-60</option>
+							<option>-50</option>
+							<option>-40</option>
+							<option>-30</option>
+							<option>-20</option>
+							<option>-10</option>
+							<option>0</option>
+							<option>10</option>
+							<option>20</option>
+							<option>30</option>
+							<option>40</option>
+							<option>50</option>
+							<option>60</option>
+							<option>70</option>
+							<option>80</option>
+							<option>90</option>
+							<option>100</option>
+						</datalist>
+					</div>
+					<button onclick="toggleGenderSliders()">Toggle gender sliders</button>
+				</section>
+			</div>
+			<div id="controls">
+				<div id="back">
+					<span class="en">Back</span>
+					<span class="no">Tilbake</span>
 				</div>
-			</section>
-			<section id="sign-up">
-				<h1>Create account</h1>
-				<p class="en"></p>
-				<input class="en" type="range" placeholder="">
-			</section>
+				<div id="next">
+					<span class="en">Next</span>
+					<span class="no">Neste</span>
+				</div>
+			</div>
 		</div>
 		<script src="js/demo.js"></script>
 	</body>
