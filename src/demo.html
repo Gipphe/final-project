@@ -18,8 +18,8 @@
 		</div>
 		<div id="lander">
 			<div id="main" class="slide">
-				<section>
-					<h1>GenderAll</h1>
+				<h1>GenderAll</h1>
+				<div class="mid">
 					<p class="en">GenderAll enables all people to express their own gender on the Internet.</p>
 					<input id="gender-input" class="en" type="text" placeholder="Enter your gender..."><br>
 					<ul id="gender-list" class="en">
@@ -47,11 +47,11 @@
 						<li>Woman</li>
 						<li id="custom">Custom...</li>
 					</ul>
-				</section>
+				</div>
 			</div>
-			<div id="sign-up" class="slide">
-				<section>
-					<h1>Specify your gender</h1>
+			<div id="define" class="slide">
+				<h1>Specify your gender</h1>
+				<div class="mid">
 					<div id="gender-graph">
 						<svg id="graph" xmlns="http://www.w3.org/2000/svg">
 							<g class="grid x-grid">
@@ -62,15 +62,15 @@
 							</g>
 							<defs>
 								<pattern id="small-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-									<path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5" />
+									<path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"></path>
 								</pattern>
 								<pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-									<rect width="100" height="100" fill="url(#small-grid" />
+									<rect width="100" height="100" fill="url(#small-grid"></rect>
 								</pattern>
 							</defs>
-							<rect width="100%" height="100%" fill="url(#grid)" />
+							<rect width="100%" height="100%" fill="url(#grid)"></rect>
 						</svg>
-						<img id="cursor" alt="cross mark cursor" src="img/cursor.png"></img>
+						<img id="cursor" alt="cross mark cursor" src="img/cursor.png">
 						<div class="label" id="man">Man</div>
 						<div class="label" id="woman">Woman</div>
 						<div class="label" id="max-intense">Intense</div>
@@ -102,7 +102,30 @@
 						</datalist>
 					</div>
 					<button onclick="toggleGenderSliders()">Toggle gender sliders</button>
-				</section>
+				</div>
+			</div>
+			<div id="sign-up" class="slide">
+				<h1>Sign up</h1>
+				<div class="mid">
+					<p class="subtitle">Sign up for a free GenderAll account</p>
+					<p>
+						This lets you use your GenderAll account wherever it is supported on the web, allowing you to easily use your specified gender.
+					</p>
+					<form id="sign-up-form">
+						<label for="sign-up-email">Email:</label>
+						<label for="sign-up-password">New password</label>
+						<input type="text" id="sign-up-email" placeholder="Email"><br>
+						<input type="password" id="sign-up-password" placeholder="Password">
+					</form>
+				</div>
+			</div>
+			<div id="account-created" class="slide">
+				<h1>Account created</h1>
+				<div class="mid">
+					<p class="subtitle">Account created!</p>
+					<label for="account-name">Account name: </label><span id="account-name"></span><br>
+					<label for="account-password">Account password: </label><span id="account-password"></span><br>
+				</div>
 			</div>
 			<div id="controls">
 				<div id="back">
@@ -115,6 +138,17 @@
 				</div>
 			</div>
 		</div>
+		<!--
+			Yes, multiple external script tags are detrimental to page loading
+			time, but the size of the demo.js script because unbearably large
+			for human reading.
+			In a proper production environment, module systems like browserify,
+			RequireJS or ES7 import/export statements are advisable.
+		-->
+		<script src="js/state.js"></script>
+		<script src="js/gender-input.js"></script>
+		<script src="js/gender-graph.js"></script>
+		<script src="js/page-controls.js"></script>
 		<script src="js/demo.js"></script>
 	</body>
 </html>
