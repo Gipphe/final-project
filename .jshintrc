@@ -1,0 +1,12 @@
+{
+  "globals": {
+    "window": false,
+    "document": false,
+    "console": true
+  },
+  "nonew": true,
+  "unused": true,
+  "undef": true,
+  "browser": true,
+  "esnext": false
+}
