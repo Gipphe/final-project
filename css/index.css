@@ -1,0 +1,134 @@
+/* Font declaration */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Raleway'), local('Raleway-Regular'), url(../fonts/raleway-regular.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Raleway'), local('Raleway-Regular'), url(../fonts/raleway-extended.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+	font-family: 'Manifesto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Manifesto'), local('Manifesto-regular'), url(../fonts/manifesto.ttf) format('truetype');
+}
+
+body {
+	margin: 0;
+	font-size: 110%;
+	font-family: 'Raleway', sans-serif;
+	line-height: 170%;
+}
+
+/* Sections
+------------ */
+section {
+	padding: 80px 150px;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 400px;
+}
+section .title {
+	font-size: 150%;
+}
+section:nth-child(odd) {
+	background-color: #FFF;
+}
+section:nth-child(even) {
+	background-color: #EE9748;
+	color: white;
+}
+section h2 {
+	text-align: center;
+}
+
+/* Lander section
+------------ */
+#lander {
+	background-image: url('../img/cover4_genderall.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+
+	height: 100vh !important;
+	text-align: center;
+	position: relative;
+}
+#lander .box {
+	background-color: rgba(0,0,0,0.5);
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	padding: 1% 2% 4%;
+	color: #fff;
+}
+#lander h1 {
+	font-family: 'Manifesto', 'Raleway', sans-serif;
+	font-size: 6em;
+	margin: 40px 0;
+}
+
+/* Top bar
+------------ */
+header {
+	height: 55px;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	box-sizing: border-box;
+	display: flex;
+	text-align: right;
+	flex-flow: row-reverse;
+	justify-content: flex-start;
+	align-items: center;
+
+	background-color: #34495e;
+	padding: 0 30px;
+}
+header a,
+header a:visited {
+	color: #fff;
+	text-decoration: none;
+	margin: 0 10px;
+}
+header .languages {
+	margin: 0 10px;
+}
+header .languages div {
+	margin: 0 5px;
+	display: inline-block;
+}
+header .languages img {
+	opacity: 0.5;
+	filter: grayscale(100%);
+}
+header .languages .selected img {
+	opacity: 1;
+	filter: none;
+}
+header img {
+	height: 20px;
+	border-radius: 6%;
+}
+
+/* Translations
+------------ */
+html[lang=no] .en,
+html[lang=en] .no,
+html[lang=en] .no,
+html[lang=no] .en {
+    display: none !important;
+}

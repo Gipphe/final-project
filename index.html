@@ -1,28 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-		<meta charset="utf-8">
 		<title>GenderAll</title>
-		<link rel="stylesheet" href="css/style.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/responsive.css"> -->
+		<link rel="icon" href="img/favicon.png" type="image/icon" />
+		<!-- <link rel="stylesheet" href="font/font-awesome-4.6.3/css/font-awesome.min.css"> -->
 	</head>
 	<body>
-		<div class="header">
-			<img alt="Norsk" lang="no" onclick="changeLang('no')" onkeypress="changeLang('no')" src="img/norwegian-flag.png">
-			<img alt="English" lang="en" onclick="changeLang('en')" onkeypress="changeLang('en')" src="img/us-flag.png">
-		</div>
-		<section class="logo">
-			<p>GenderAll</p>
+		<header>
+			<div class="languages">
+				<div title="Norsk">
+					<a id="no" lang="no" onclick="changeLang('no')" onkeypress="changeLang('no')">
+						<img alt="Norsk" src="img/norwegian-flag.png">
+					</a>
+				</div>
+				<div title="English">
+					<a id="en" class="selected" lang="en" onclick="changeLang('en')" onkeypress="changeLang('en')">
+						<img alt="English" src="img/uk-flag.png">
+					</a>
+				</div>
+			</div>
+			<nav id="list">
+				<a class="no" lang="no" href="#contactmenu">Kontakt</a>
+				<a class="en" lang="en" href="#contactmenu">Contact</a>
+				<a class="no" lang="no" href="#howto">Fremgangsmåte</a>
+				<a class="en" lang="en" href="#howto">Howto</a>
+				<a class="no" lang="no" href="#genderall">GenderAll</a>
+				<a class="en" lang="en" hreF="#genderall">GenderAll</a>
+				<a class="no" lang="no" href="#problem">Problemet</a>
+				<a class="en" lang="en" href="#problem">Problem</a>
+			</nav>
+		</header>
+		<section id="lander">
+			<div class="box">
+				<h1>GenderAll</h1>
+				<div class="en" lang="en">
+					<p class="title">With GenderAll we desire to give all people the opportunity to express their own gender online.</p>
+				</div>
+				<div class="no" lang="no">
+					<p class="title">GenderAll tilrettelegger for at all mennesker skal kunne uttrykke sitt eget kjønn på internett.</p>
+				</div>
+			</div>
 		</section>
-		<section class="problem">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium porttitor libero eu molestie. Donec non cursus magna, sit amet elementum arcu. Proin orci mauris, finibus vitae finibus vel, efficitur at sapien. Fusce eget eleifend turpis, ut consectetur tellus. Integer id semper purus. Sed consequat euismod gravida. Aliquam vitae dolor diam. Donec eleifend eleifend arcu mollis rhoncus.
+		<section id="problem" class="content">
+			<div class="en" lang="en">
+				<h2>The Problem</h2>
+				<p>
+					In today's modern society there is no longer only two defined genders. In the United States alone, approximately <a class="source" href="http://williamsinstitute.law.ucla.edu/wp-content/uploads/How-Many-Adults-Identify-as-Transgender-in-the-United-States.pdf">1.4 million</a> people define themselves as neither male or female. Although the majority of our world’s population don’t exist in this category, universal design to us means including everyone, also this minority. Nevertheless, large international online services, such as Google and Instagram, still offers the same basic gender options, which in no way represents the variation among us humans. We consider the lack of modern alternatives a significant social problem, since it excludes a significant amount of people. Having to forcefully identify yourself as something you don’t feel like, may to many cause discomfort and negatively affect the overall quality of life.<br>
+					The gender debate has however become more relevant in recent years and some social media like Facebook and Tumblr currently provides users the ability to customize their gender. This possibility is unfortunately not particularly common, something we want to change with GenderAll.
+				</p>
+			</div>
+			<div class="no" lang="no">
+				<h2>Problemet</h2>
+				<p>
+					I dagens moderne samfunn finnes det ikke lenger bare to definerte kjønn. Bare i USA lever det omlag <a class="source" href="http://williamsinstitute.law.ucla.edu/wp-content/uploads/How-Many-Adults-Identify-as-Transgender-in-the-United-States.pdf">1.4 millioner</a> mennesker som verken definerer seg selv som mann eller kvinne. Selv om majoriteten ikke inngår i denne kategorien, handler universelt design om å inkludere så mange som mulig, også mindretallet. Likevel tilbyr fortsatt store internasjonale nettjenester, som Google og Instagram, et mangelfullt utvalg alternativer, som på ingen måte representerer variasjonen blant oss mennesker. Vi anser mangelen på slike alternativer som et betydelig sosialt problem, ettersom det ekskluderer en betydelig mengde mennesker. Når en må identifisere seg selv som noe en ikke føler er riktig, kan det for mange oppstå ubehag og negativt påvirke den generelle livskvaliteten.<br>
+					Kjønnsdebatten har dog blitt mer aktuell de siste årene og enkelte sosiale medier som Facebook og Tumblr gir i dag brukerne muligheten til å egendefinere kjønnet sitt. Denne muligheten er dessverre ikke spesielt utbredt, noe vi ønsker å endre med GenderAll.
+				</p>
+			</div>
 		</section>
-		<section>
-			Phasellus eget sapien lorem. Mauris lobortis nulla diam, ut pretium sem vulputate nec. Mauris vel tristique purus, eu viverra nibh. Integer lacinia nunc lorem, eget sodales neque aliquet vitae. Vivamus venenatis maximus accumsan. Vestibulum tempor massa a laoreet sodales. Nam felis magna, dictum at varius sodales, suscipit in dolor. Sed consectetur mauris sed ligula tempor, a tincidunt lectus blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut porttitor quam a semper tincidunt. In vulputate, elit sit amet sollicitudin iaculis, urna urna vestibulum ante, id tincidunt tortor magna vitae ligula. Phasellus ac lacus bibendum, convallis libero ac, lobortis magna. Duis luctus, tellus nec porta mollis, felis diam eleifend purus, nec viverra leo nisl ut libero. Cras ullamcorper blandit ante ut aliquam. Nunc condimentum sem id metus rutrum, eget luctus nisl aliquet.
+		<section id="genderall" class="content">
+			<h2>GenderAll</h2>
+			<div class="en" lang="en">
+				<p>With GenderAll we desire to give all people the opportunity to express their own gender online. Our users should be able to define and change their gender through a simple userinterface across all platforms. GenderAll will be easily implemented in existing design and used effortlessly by anyone who needs our options. Our solution provides the freedom to choose your own identity.</p>
+			</div>
+			<div class="no" lang="no">
+				<p>Med GenderAll ønsker vi å gi alle mennesker muligheten til å kunne uttrykke sitt eget kjønn på internett. Via et enkelt brukergrensesnitt skal man kunne definere og endre sitt kjønn på tvers av alle plattformer. GenderAll skal enkelt kunne implementeres i allerede eksisterende design og lettvint benyttes av alle som har behov for alternativene. Dette gir en større frihet for brukerne som har nytte for denne applikasjonen.
+				</p>
+			</div>
 		</section>
-		<section>
-			Nullam sollicitudin venenatis eleifend. Sed dignissim ipsum a tempus interdum. Donec quis placerat sem, eget lobortis elit. Aliquam in venenatis arcu, et commodo sapien. Suspendisse in efficitur augue. Fusce et velit urna. Nullam dapibus enim maximus diam vestibulum maximus. Vivamus ut congue erat.
+		<section id="how-genderall-works">
+			<div class="en" lang="en">
+				<h2>How GenderAll works</h2>
+				<p>
+					New users will for the first time be presented with GenderAll through the process of editing or creating new profiles on social media. A GenderAll option will be available alongside the regular male/female alternatives, making sure to not replace the old model, but only to add functionality and options to it. The user can here search through existing gender titles or specify their own.<br>
+					Users will from here have the opportunity to create a GenderAll profile with their specified gender, enabling the same preferences to be used on all supported sites. If the user already has a profile, and the browser remember previous logins, this profile will automatically be suggested.<br>
+					To some users gender identity may vary with time. Therefore, we offer a dedicated page that enables the user to change their chosen gender. You can also add or adjust more attributes as intensity, external anatomy and relevant gender features. The changes will then be saved and all associated websites be updated.
+				</p>
+			</div>
+			<div class="no" lang="no">
+				<h2>Hvordan GenderAll fungerer</h2>
+				<p>
+					Brukerens første møte med vår løsning vil være gjennom prosessen med å opprette nye profiler på sosiale medier. Der man i dag har begrensede muligheter for valg av kjønn, vil et nytt alternativ med navnet GenderAll dukke opp. Her kan brukeren velge mellom flere eksisterende kjønn eller opprette sitt eget.<br>
+					Brukeren vil videre få muligheten til å opprette en GenderAll profil med det valgte kjønnet(evt. flere), slik at den samme profilen kan benyttes på flere nettsider. Har brukeren allerede en eksisterende profil vil man kunne logge inn med denne. Om nettleseren i tillegg har lagret kontoinformasjon til denne profilen ved tidligere bruk, vil GenderAll bli foreslått som førstevalg.<br>
+					For mange vil kjønnsidentiteten kunne variere med tid. Vi tilbyr derfor en egen nettside som gir brukeren mulighet til å endre sitt valgte kjønn. Her kan også flere attributter legges inn som intensitet, ytre anatomi og liknende. Endringene vil deretter lagres og alle tilknyttede profiler bli oppdatert.
+				</p>
+			</div>
 		</section>
-		<script src="js/index.js"></script>
+		<section id="how-to" class="how-to">
+			<div class="en" lang="en">
+				<h2>How to use GenderAll</h2>
+			</div>
+			<div class="no" lang="no">
+				<h2>Hvordan bruker Genderall</h2>
+			</div>
+		</section>
+		<section id="demo">
+			<div class="en" lang="en">
+				<h2>Challenges</h2>
+			</div>
+			<div class="no" lang="no">
+				<h2>Utfordringer</h2>
+			</div>
+		</section>
+		<section id="contact-menu" class="content">
+			<div class="en title" lang="en">
+				Contact
+			</div>
+			<div class="no title" lang="no">
+				Kontakt
+			</div>
+			<div class="contact">
+				<div class="en" lang="en">
+					<p class="small-heading">Location</p>
+					<p class="contactbox">
+						Oslo and Akershus University College of Applied Sciences<br>
+						PO Box 4 St. Olavs plass<br>
+						0130 Oslo, Norway
+					</p>
+				</div>
+				<div class="no" lang="no">
+					<p class="small-heading">Lokasjon</p>
+					<p class="contactbox">
+						Høgskolen i Oslo og Akershus<br>
+						Postboks 4 St. Olavs plass<br>
+						0130 Oslo, Norge
+					</p>
+				</div>
+			</div>
+			<div class="contact">
+				<div class="en" lang="en">
+					<p class="small-heading">Telephone</p>
+					<p class="contactbox">
+						Anytime. 24/7<br>
+						Phone: +47 67 23 50 00
+					</p>
+				</div>
+				<div class="no" lang="no">
+					<p class="small-heading">Telefon</p>
+					<p class="contactbox">
+						Når som helst. 24/7<br>
+						Telefon: +47 67 23 50 00
+					</p>
+				</div>
+			</div>
+			<div class="contact">
+				<div class="en" lang="en">
+					<p class="small-heading">E-mail</p>
+					<p>
+						Contact via e-mail.<br>
+						E-mail: genderall@stud.hioa.no<br>
+					</p>
+				</div>
+				<div class="no" lang="no">
+					<p class="small-heading">E-mail</p>
+					<p>
+						Kontakt via e-mail.<br>
+						E-mail: genderall@stud.hioa.no
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="en" lang="en">
+				<p> Copyright ©2016 Genderall Inc. All rights reversed.
+					<br> Created by N. Nanthawisit, C. Arntzen, A.Reinholt, V. Bakke, N. Johansen and J. Iversen.
+				</p>
+			</div>
+			<div class="no" lang="no">
+				<p> Copyright ©2016 Genderall Inc. Alle rettigheter reservert.
+					<br> Skapt av N. Nanthawisit, C. Arntzen, A.Reinholt, V. Bakke, N. Johansen og J. Iversen.
+				</p>
+			</div>
+		</footer>
+		<script src="index.js"></script>
 	</body>
 </html>
