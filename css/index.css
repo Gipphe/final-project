@@ -24,16 +24,20 @@ body {
 	margin: 0;
 	font-size: 110%;
 	font-family: 'Raleway', sans-serif;
-	line-height: 170%;
 }
 
 /* Sections
 ------------ */
-section {
-	padding: 80px 150px;
+section,
+footer {
+	padding: 80px 20%;
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 400px;
+	height: 100vh;
+}
+section div {
+	line-height: 170%;
 }
 section .title {
 	font-size: 150%;
@@ -46,7 +50,14 @@ section:nth-child(even) {
 	color: white;
 }
 section h2 {
+	font-size: 260%;
 	text-align: center;
+}
+@media only screen and (max-width: 1001px) {
+	section,
+	footer {
+		padding: 40px 5%;
+	}
 }
 
 /* Lander section
@@ -76,7 +87,58 @@ section h2 {
 #lander h1 {
 	font-family: 'Manifesto', 'Raleway', sans-serif;
 	font-size: 6em;
+	line-height: initial;
 	margin: 40px 0;
+}
+
+/* Contact section
+------------ */
+#contact {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+#contact .contact {
+	text-align: center;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	flex-flow: row;
+}
+#contact .contact div {
+	width: 30%;
+}
+#contact .contact div img {
+	height: 48px;
+}
+
+/* Slideshow
+------------ */
+#slideshow,
+#slide-back,
+#slide-next {
+	max-height: 500px;
+	height: 50vh;
+	min-height: 300px;
+	display: inline-block;
+}
+#slideshow {
+	overflow: hidden;
+	width: 70%;
+}
+#slide-back,
+#slide-next {
+	display: inline-block;
+	width: 10%;
+	min-width: 50px;
+}
+#slideshow .slide img {
+	width: 45%;
+	margin-right: 2.5%;
+}
+@media only screen and (max-width: 1001px) {
+	#slideshow {
+		width: auto;
+	}
 }
 
 /* Top bar
@@ -100,28 +162,46 @@ header {
 }
 header a,
 header a:visited {
+	transition: text-shadow .2s;
 	color: #fff;
 	text-decoration: none;
+}
+header nav a {
 	margin: 0 10px;
+}
+header nav a:hover {
+	text-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
 header .languages {
-	margin: 0 10px;
+	margin: 0 5px;
 }
 header .languages div {
-	margin: 0 5px;
+	margin: 0 10px;
 	display: inline-block;
 }
 header .languages img {
-	opacity: 0.5;
+	opacity: 0.7;
 	filter: grayscale(100%);
+}
+header .languages a {
+	cursor: pointer;
 }
 header .languages .selected img {
 	opacity: 1;
 	filter: none;
 }
 header img {
-	height: 20px;
 	border-radius: 6%;
+	height: 20px;
+}
+
+/* Footer
+------------ */
+footer {
+	text-align: center;
+	font-size: 80%;
+	height: 200px;
+	min-height: auto;
 }
 
 /* Translations
