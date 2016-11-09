@@ -18,14 +18,6 @@
 			return index;
 		};
 		var prot = {};
-		prot.defaultNext = 'Next';
-		prot.defaultBack = 'Back';
-		prot.setNextText = function(text) {
-			this.nextEl.innerHTML = text;
-		};
-		prot.setBackText = function(text) {
-			this.backEl.innerHTML = text;
-		};
 		prot.states = [];
 		Object.defineProperty(prot, 'state', {
 			enumerable: true,
@@ -40,12 +32,6 @@
 		});
 		prot.whenNewState = function(newState) {
 			document.getElementById(newState.id).scrollIntoView(true);
-			if (newState.id === 'sign-up') {
-				this.setNextText('Sign up');
-			} else {
-				this.setBackText(this.defaultBack);
-				this.setNextText(this.defaultNext);
-			}
 		};
 		prot.next = function() {
 			var states = this.states;
@@ -58,6 +44,7 @@
 			}
 			var nextState = states[nextStateIndex];
 			this.state = nextState;
+			return this.state;
 		};
 		prot.back = function() {
 			var states = this.states;
@@ -70,14 +57,13 @@
 			}
 			var prevState = states[prevStateIndex];
 			this.state = prevState;
+			return this.state;
 		};
-		var State = function(el, slides, backEl, nextEl) {
+		var State = function(el, slides) {
 			var state = Object.create(prot);
 			state.el = el;
 			state.states = getIds(slides);
 			state._state = state.states[0];
-			state.backEl = backEl;
-			state.nextEl = nextEl;
 			return state;
 		};
 		return State;
