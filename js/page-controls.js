@@ -4,7 +4,9 @@
 
 	var back = document.getElementById('back');
 	var next = document.getElementById('next');
-	var state = State(back, next);
+	var slideList = document.getElementsByClassName('slide');
+	var el = document.getElementById('#lander');
+	var state = State(el, slideList, back, next);
 	back.addEventListener('click', function() {
 		state.back();
 	});

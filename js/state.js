@@ -7,7 +7,6 @@
 		return els;
 	};
 	window.State = (function() {
-		var slideList = document.getElementsByClassName('slide');
 		var getIndexByProperty = function(arr, prop, val) {
 			var index;
 			for (var i = 0, len = arr.length; i < len; i += 1) {
@@ -27,8 +26,7 @@
 		prot.setBackText = function(text) {
 			this.backEl.innerHTML = text;
 		};
-		prot.states = getIds(slideList);
-		prot._state = prot.states[0];
+		prot.states = [];
 		Object.defineProperty(prot, 'state', {
 			enumerable: true,
 			configurable: false,
@@ -73,8 +71,11 @@
 			var prevState = states[prevStateIndex];
 			this.state = prevState;
 		};
-		var State = function(backEl, nextEl) {
+		var State = function(el, slides, backEl, nextEl) {
 			var state = Object.create(prot);
+			state.el = el;
+			state.states = getIds(slides);
+			state._state = state.states[0];
 			state.backEl = backEl;
 			state.nextEl = nextEl;
 			return state;
