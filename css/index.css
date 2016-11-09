@@ -33,8 +33,8 @@ footer {
 	padding: 80px 20%;
 	box-sizing: border-box;
 	width: 100%;
-	min-height: 400px;
-	height: 100vh;
+	height: auto;
+	min-height: 100vh;
 }
 section div {
 	line-height: 170%;
@@ -53,10 +53,16 @@ section h2 {
 	font-size: 260%;
 	text-align: center;
 }
+section a {
+	white-space: nowrap;
+}
 @media only screen and (max-width: 1001px) {
 	section,
 	footer {
 		padding: 40px 5%;
+	}
+	section .title {
+		font-size: 110%;
 	}
 }
 
@@ -85,10 +91,19 @@ section h2 {
 	color: #fff;
 }
 #lander h1 {
-	font-family: 'Manifesto', 'Raleway', sans-serif;
+	font-family: /*'Manifesto', */'Raleway', sans-serif;
 	font-size: 6em;
 	line-height: initial;
 	margin: 40px 0;
+}
+@media only screen and (max-width: 1001px) {
+	#lander h1 {
+		font-size: 2.5em;
+	}
+	#lander .box {
+		width: 100vw;
+		padding: 8%;
+	}
 }
 
 /* Contact section
@@ -97,18 +112,35 @@ section h2 {
 	padding-left: 150px;
 	padding-right: 150px;
 }
-#contact .contact {
+#contact .info {
 	text-align: center;
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-around;
 	flex-flow: row;
 }
-#contact .contact div {
+#contact .info .category {
 	width: 30%;
 }
-#contact .contact div img {
-	height: 48px;
+
+#contact .info .category img {
+	height: 64px;
+}
+@media only screen and (max-width: 1001px) {
+	#contact {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+	#contact .info {
+		flex-flow: column;
+	}
+	#contact .info .category {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	#contact .info .category:last-child {
+		margin-bottom: 0px;
+	}
 }
 
 /* Slideshow
@@ -195,6 +227,10 @@ header img {
 	height: 20px;
 }
 
+@media only screen and (max-width: 1001px) {
+	header
+}
+
 /* Footer
 ------------ */
 footer {
@@ -202,6 +238,8 @@ footer {
 	font-size: 80%;
 	height: 200px;
 	min-height: auto;
+	color: #fff;
+	background-color: #6c7a89;
 }
 
 /* Translations
