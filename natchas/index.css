@@ -1,0 +1,402 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	font-size: 100%;
+	font-family:"Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	background-color: none;
+}
+
+
+/* HEADER */
+
+header{
+	width: 100%;
+	height: auto;
+	background-image: url("img/cover4_genderall.jpg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-color: none;
+	padding-bottom: 10%;
+	margin-bottom: 7%;
+	position: relative;
+	padding-top: 15%;
+}
+.mySlides {display:none}
+
+.w3-content{
+	max-width:800px;
+	padding-bottom: 2%;
+}
+.mySlides{
+	width: 100%;
+}
+.slide{
+	float: left;
+	width: 45%;
+	min-width: 250px;
+	height: auto;
+	padding-right: 3%;
+	margin: auto;
+	text-align: center;
+}
+#genderall{
+	float: left;
+	padding-bottom: 7%;
+}
+
+button{
+	background-color: black;
+	word-spacing: 10%;
+	width: 17%;
+	height: 25px;
+	color: white;
+	line-height: 170%;
+	border-radius: 4px;
+	border: 1px solid gray;
+	margin: auto;
+}
+
+nav {
+	width: 100%;
+	height: 40px;
+	font-weight: 100;
+	background-color: #34495E;
+	padding-top: 1%;
+	direction: ltr;
+	list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+  	left: 0;
+  	z-index: 9999;
+  	bottom: 0;
+}
+
+nav * {
+    direction: ltr;
+}
+
+nav span {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+nav .languages img {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    height: 20px;
+    border-radius: 9%;
+}
+nav .languages a {
+    margin-right: 1%;
+    padding: 0;
+}
+
+nav .languages .selected a {
+    background-color: #ddd;
+}
+nav .languages .selected img {
+    opacity: 1;
+    filter: none;
+}
+a {
+	margin-right: 20px;
+	padding: 0;
+	font-size: 1.2em;
+	font-weight: 590;
+	color: #fff;
+	float: right;
+	text-decoration: none;
+}
+
+
+div#headertitle {
+	width: 65%;
+	max-height: 500px;
+	height: auto;
+	margin: auto;
+	padding-top: 1%;
+	background:rgba(0, 0, 0, .4);
+	padding-bottom: 4%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+/*TEXT IN HEADERTITLE BOX*/
+h1{
+	font-size: 6em;
+	text-align: center;
+	color: white;
+	
+}
+h2#title2{
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.7px;
+	font-size: 1.5em;
+	word-spacing: 1.3px;
+
+}
+/*CONTENT BOX*/
+.content{
+	width: 86%;
+	min-height: 460px;
+	height: auto;
+	background-color: white;
+	color: black;
+
+	padding-left: 7%;
+	padding-right: 7%;
+}
+p {
+	letter-spacing: 1px;
+	font-size: 1.1em;
+	word-spacing: 1.3px;
+	line-height: 170%;
+}
+p .source{
+	font-size: inherit;
+	color: inherit;
+	text-decoration:underline;
+	letter-spacing: inherit;
+	word-spacing: inherit;
+	display: inline;
+}
+.content a{
+	float: none;
+}
+/*TITLE ON EVERY CONTENT BOXES (-HOWTO BOX)*/
+h2{
+	color: black;
+	text-align: center;
+	margin-bottom: 3%;
+	font-size: 2.6em;
+}
+
+
+/*SOLUTIONS BOX*/
+div#genderall {
+	background-color: #EE9748;
+	width: 86%;
+	min-height: 400px;
+	height: auto;
+	color: white;
+	padding-top: 2%;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+.howgenderallworks{
+	width: 86%;
+	min-height: 420px;
+	height: auto;
+	background-color:white;
+	color: black;
+	padding-top: 40%;
+	padding-bottom: 10%;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+.whitetitleincolorbox{
+	font-size: 2.6em;
+	color: white;
+	margin-bottom: 6%;
+}
+/*HOW-TO-USE BOX*/
+.howto{
+	background-color: #EE9748;
+	width: 100%;
+	min-height: 900px;
+	height: auto;
+	padding-bottom: 10%;
+	padding-top: 2%;
+}
+h2#howtotitle{
+	font-size: 2.9em;
+	color: black;
+	margin-bottom: 6%;
+	font-weight: 700;
+}
+
+/*LEFT-SIDE BOX CONTAINS CIRCLEBOX1 AND 3*/
+.left-side {
+	width: 46%;
+	min-height: 700px;
+	height: auto;
+	background-color: none;
+	float: left;
+}
+
+div#circlebox1 {
+	width: 50%;
+	min-height: 150px;
+	height: auto;
+	background-color: none;
+	text-align: center;
+	color: black;
+	float: right;
+	margin-bottom: 33%;
+	margin-top: 5%;
+}
+
+div#circlebox3 {
+	width: 51%;
+	min-height: 150px;
+	height: auto;
+	background-color: none;
+	text-align: center;
+	color: black;
+	float: right;
+}
+/*RIGHT-SIDE BOX CONTAINS CIRCLEBOX2 AND 4*/
+ .right-side {
+	width: 45%;
+	min-height: 700px;
+	height: auto;
+	background-color: none;
+	float: left;
+}
+
+div#circlebox2 {
+	width: 45%;
+	min-height: 150px;
+	background-color: none;
+	color: black;
+	text-align: center;
+	margin-bottom: 35%;
+	margin-top: 34%;
+
+}
+
+div#circlebox4 {
+	width: 40%;
+	min-height: 150px;
+	height: auto;
+	background-color: none;
+	color: black;
+	text-align: center;
+
+}
+.leftrighttitle{
+	letter-spacing: 1px;
+	font-size: 1.1em;
+	word-spacing: 1.3px;
+	line-height: 170%;
+	font-weight: bold;
+}
+
+/*ROUND BOX CONTAINS CIRCLE, CIRCLE-LINE AND ICONS*/
+.round {
+	width: 6%;
+	min-height: 680px;
+	height: auto;
+	float: left;
+	background-color: none;
+	padding-top: 1.5%;
+	float: left;
+	overflow: hidden;
+	padding-right: 2%;
+	padding-left: 1%;
+}
+
+.circle {
+	width: 100%;
+	height: 0.5px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    -khtml-border-radius: 50%;
+	border: 1.5px solid white;
+	padding-bottom: 100%;
+	position: relative;
+
+}
+.circle-line {
+	width: 0;
+	height: 100px;
+	border: 1.3px dotted white;
+	margin-left: 25px;
+	margin: auto;	
+}
+
+.facircle {
+	color: white;
+	margin-right: 35%;
+	margin-left: 35%;
+	margin-top: 29%;
+}
+.facircle2 {
+	color: white;
+	margin-right: 33%;
+	margin-left: 33%;
+	margin-top: 27%;
+}
+
+/*BOXES, LINES AND TEXTS THAT WILL BE VISIBLE IN SMALL RESOLUTION*/
+#circlebox1res, #circlebox2res,#circlebox3res,#circlebox4res, hr, .circleres{
+	display: none;
+}
+
+
+div#demo{
+	width: 86%;
+	min-height: 400px;
+	height: auto;
+	background-color: none;
+	color: black;
+	padding-top: 2%;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+/*CONTACT*/
+.contact {
+	width: 33.3%;
+	min-height: 280px;
+	height: auto;
+	background-color: none;
+	text-align: center;	
+	float: left;
+}
+.content h2#contact {
+	font-size: 2.6em;
+	color: black;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+.contactbox{
+	font-size: 1em;
+}
+
+/*FOOTER*/
+div#footer {
+	width: 100%;
+	min-height: 70px;
+	height: auto;
+	background-color: #6C7A89;  
+	text-align: center;
+	color: white;
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+footer p {
+	font-size: 1em;
+}
+
+/* Oversettelser
+------------ */
+html[lang=no] * {
+    direction: ltr;
+}
+html[lang=en] * {
+    direction: ltr;
+}
+html[lang=no] .en,
+html[lang=en] .no,
+html[lang=en] .no,
+html[lang=no] .en {
+    display: none !important;
+}
