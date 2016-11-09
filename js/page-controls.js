@@ -4,7 +4,7 @@
 
 	var back = document.getElementById('back');
 	var next = document.getElementById('next');
-	var state = new State(back, next);
+	var state = State(back, next);
 	back.addEventListener('click', function() {
 		state.back();
 	});

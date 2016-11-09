@@ -18,21 +18,18 @@
 			}
 			return index;
 		};
-		var State = function(backEl, nextEl) {
-			this.backEl = backEl;
-			this.nextEl = nextEl;
-		};
-		State.prototype.defaultNext = 'Next';
-		State.prototype.defaultBack = 'Back';
-		State.prototype.setNextText = function(text) {
+		var prot = {};
+		prot.defaultNext = 'Next';
+		prot.defaultBack = 'Back';
+		prot.setNextText = function(text) {
 			this.nextEl.innerHTML = text;
 		};
-		State.prototype.setBackText = function(text) {
+		prot.setBackText = function(text) {
 			this.backEl.innerHTML = text;
 		};
-		State.prototype.states = getIds(slideList);
-		State.prototype._state = State.prototype.states[0];
-		Object.defineProperty(State.prototype, 'state', {
+		prot.states = getIds(slideList);
+		prot._state = prot.states[0];
+		Object.defineProperty(prot, 'state', {
 			enumerable: true,
 			configurable: false,
 			get: function() {
@@ -43,7 +40,7 @@
 				this.whenNewState(newState);
 			}
 		});
-		State.prototype.whenNewState = function(newState) {
+		prot.whenNewState = function(newState) {
 			document.getElementById(newState.id).scrollIntoView(true);
 			if (newState.id === 'sign-up') {
 				this.setNextText('Sign up');
@@ -52,7 +49,7 @@
 				this.setNextText(this.defaultNext);
 			}
 		};
-		State.prototype.next = function() {
+		prot.next = function() {
 			var states = this.states;
 			var currState = this.state;
 			var nextStateIndex = getIndexByProperty(states, 'id', currState.id) + 1;
@@ -64,7 +61,7 @@
 			var nextState = states[nextStateIndex];
 			this.state = nextState;
 		};
-		State.prototype.back = function() {
+		prot.back = function() {
 			var states = this.states;
 			var currState = this.state;
 			var prevStateIndex = getIndexByProperty(states, 'id', currState.id) - 1;
@@ -75,6 +72,12 @@
 			}
 			var prevState = states[prevStateIndex];
 			this.state = prevState;
+		};
+		var State = function(backEl, nextEl) {
+			var state = Object.create(prot);
+			state.backEl = backEl;
+			state.nextEl = nextEl;
+			return state;
 		};
 		return State;
 	}());
