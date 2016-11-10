@@ -1,21 +1,18 @@
 (function() {
-	// Simple call-based state machine
-	var getIds = function(elementList) {
-		var els = Array.prototype.map.call(elementList, function(el) {
-			return {id: el.getAttribute('id')};
-		});
-		return els;
-	};
+	// Simple call-based "state machine", if you can call it that
 	window.State = (function() {
+		var getIds = function(elementList) {
+			var els = Array.prototype.map.call(elementList, function(el) {
+				return { id: el.getAttribute('id') };
+			});
+			return els;
+		};
 		var getIndexByProperty = function(arr, prop, val) {
-			var index;
 			for (var i = 0, len = arr.length; i < len; i += 1) {
 				if (arr[i][prop] === val) {
-					index = i;
 					return i;
 				}
 			}
-			return index;
 		};
 		var prot = {};
 		prot.states = [];
@@ -26,8 +23,9 @@
 				return this._state;
 			},
 			set: function(newState) {
+				var oldState = this._state;
 				this._state = newState;
-				this.whenNewState(newState);
+				this.whenNewState(newState, oldState);
 			}
 		});
 		prot.whenNewState = function(newState) {

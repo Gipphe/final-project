@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+	version="1.1"
+	id="right-arrow"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="24"
+	height="72"
+	viewBox="0 0 24 72"
+	xml:space="preserve">
+	<g id="right-arrow">
+		<path
+			fill="#2f1e0e"
+			d="
+			M 13 0
+			L 24 36
+			L 13 72
+			L 0 72
+			L 11 36
+			L 0 0
+			z
+			">
+		</path>
+	</g>
+</svg>

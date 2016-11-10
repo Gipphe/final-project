@@ -110,23 +110,42 @@
 		<section id="how-to" class="how-to">
 			<h2 class="en" lang="en">How to use GenderAll</h2>
 			<h2 class="no" lang="no">Hvordan bruker Genderall</h2>
-			<div id="slide-back"><
-			</div>
-			<div id="slideshow">
-				<div class="slide 1 view">
-					<img src="img/slides/en-1.png">
+			<div id="slideshow-container">
+				<div id="slide-back">
+					<img alt="left, tailless arrow" src="img/slideshow-left-arrow.svg">
 				</div>
-				<div class="slide 2">
-					<img src="img/slides/en-2.png">
+				<div id="slideshow">
+					<div class="slide view" id="slide-1">
+						<img alt="the main prompt for GenderAll as seen in its proper implementation" src="img/slides/en-1.png">
+						<p class="en">
+							This is the first box our users will be presented with. You will here be asked to specify your gender and while you type, a list of matching suggestion will appear under the input box. The “Ok” button confirms your choice and you are done. If you want to save this gender specification to be used with other sites or you already have a profile, you can press the “Sign in” text.
+						</p>
+						<p class="no">
+						</p>
+					</div>
+					<div class="slide" id="slide-2">
+						<img alt="the sign in box for GenderAll" src="img/slides/en-2.png">
+						<p>
+							In this box, you will have the option to sign in with an already existing GenederAll-profile or to create a new one. If you do have a profile, but do not remember your password, the “Forgot your pasword” text will take you to our main GenderAll webpage and resolve the case there.
+						</p>
+					</div>
+					<div class="slide" id="slide-3">
+						<img alt="GenderAll prompting the user for more information in regards to creating a GenderAll account" src="img/slides/en-3.png">
+						<p>
+							After clicking on “sign up” on the previous image, you are prompted to fill out your desired gender and to create your account. To keep your information saved we need your E-mail and a password of your choosing. After you have filled out the form, click “confirm” and your new profile will be created!<br>
+							You can also click on “Exit” to get to the previous image.
+						</p>
+					</div>
+					<div class="slide"  id="slide-4">
+						<img alt="final GenderAll view before accepting your gender specification" src="img/slides/en-4.png">
+						<p>
+							You have now either created a profile or logged in, as showed by the E-mail in the upper right hand corner. From here, you can update and change your preferred gender if need be and press ok. You are now done and can proceed with the remaining form.
+						</p>
+					</div>
 				</div>
-				<div class="slide 3">
-					<img src="img/slides/en-3.png">
+				<div id="slide-next">
+					<img alt="left, tailless arrow" src="img/slideshow-right-arrow.svg">
 				</div>
-				<div class="slide 4">
-					<img src="img/slides/en-4.png">
-				</div>
-			</div>
-			<div id="slide-next">
 			</div>
 		</section>
 		<section id="future">
@@ -203,7 +222,7 @@
 				<p>Skapt av N. Nanthawisit, C. Arntzen, A.Reinholt, V. Bakke, N. Johansen og J. Iversen.</p>
 			</div>
 		</footer>
-		<script src="js/State.js"></script>
+		<script src="js/state.js"></script>
 		<script src="js/index.js"></script>
 	</body>
 </html>

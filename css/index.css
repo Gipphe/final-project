@@ -38,6 +38,7 @@ footer {
 }
 section div {
 	line-height: 170%;
+	font-size: 120%;
 }
 section .title {
 	font-size: 150%;
@@ -145,6 +146,17 @@ section a {
 
 /* Slideshow
 ------------ */
+#how-to {
+	padding-left: 120px;
+	padding-right: 120px;
+}
+#slideshow-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row;
+}
 #slideshow,
 #slide-back,
 #slide-next {
@@ -154,14 +166,52 @@ section a {
 	display: inline-block;
 }
 #slideshow {
+	position: relative;
 	overflow: hidden;
 	width: 70%;
+	background-color: #efa15a;
+}
+#slideshow .slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 14pt;
+	padding: 10px;
+	box-sizing: border-box;
+	display: flex;
+	transition: 1s;
+}
+#slideshow .view {
+	opacity: 1;
 }
 #slide-back,
 #slide-next {
+	background-color: #f1ab6c;
 	display: inline-block;
 	width: 10%;
 	min-width: 50px;
+	position: relative;
+	cursor: pointer;
+	transition: .5s;
+}
+#slide-back:hover img,
+#slide-next:hover img {
+	filter: brightness(140%);
+}
+#slide-back:hover,
+#slide-next:hover {
+	background-color: #f4c091;
+}
+#slide-next img,
+#slide-back img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
 }
 #slideshow .slide img {
 	width: 45%;
