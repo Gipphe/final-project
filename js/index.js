@@ -38,27 +38,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	var state = State(slideshow, slides);
 	var lastButton = null;
 	state.whenNewState = function(newState, oldState) {
-		console.log(oldState);
 		var newEl = document.getElementById(newState.id);
 		var oldEl = document.getElementById(oldState.id);
 		if (lastButton === 'back') {
 			oldEl.style.left = slideshowWidth + 'px';
 		}
-		console.log(slideshowWidth);
 		oldEl.style.opacity = '0';
 		oldEl.classList.remove('view');
 		newEl.style.left = '0';
 		newEl.style.opacity = '1';
 		newEl.classList.add('view');
-		console.log(oldEl, newEl);
 	};
 	next.addEventListener('click', function() {
-		console.log('next');
 		lastButton = 'next';
 		state.next();
 	});
 	back.addEventListener('click', function() {
-		console.log('back');
 		lastButton = 'back';
 		state.back();
 	});
