@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+	var noJs = document.getElementsByClassName('no-js');
+	noJs = Array.prototype.slice.call(noJs);
+	console.log(noJs);
+	for (var i = 0, len = noJs.length; i < len; i += 1) {
+		console.log(noJs[i]);
+		noJs[i].classList.remove('no-js');
+	}
+
 	var en = document.getElementById('en');
 	var no = document.getElementById('no');
 	var doc = document.documentElement;

@@ -10,18 +10,6 @@
 	</head>
 	<body>
 		<header>
-			<div class="languages">
-				<div title="Norsk">
-					<a id="no" lang="no" onclick="changeLang('no')" onkeypress="changeLang('no')">
-						<img alt="Norsk" src="img/norwegian-flag.png">
-					</a>
-				</div>
-				<div title="English">
-					<a id="en" class="selected" lang="en" onclick="changeLang('en')" onkeypress="changeLang('en')">
-						<img alt="English" src="img/uk-flag.png">
-					</a>
-				</div>
-			</div>
 			<nav id="list">
 				<a class="en" lang="en" href="#top">Top</a>
 				<a class="no" lang="no" href="#top">Topp</a>
@@ -40,6 +28,18 @@
 				<a class="en" lang="en" href="#contact">Contact</a>
 				<a class="no" lang="no" href="#contact">Kontakt</a>
 			</nav>
+			<div class="languages">
+				<div title="Norsk">
+					<a id="no" lang="no" href="#" onclick="changeLang('no')" onkeypress="changeLang('no')">
+						<img alt="Norsk" src="img/norwegian-flag.png">
+					</a>
+				</div>
+				<div title="English">
+					<a id="en" class="selected" href="" lang="en" onclick="changeLang('en')" onkeypress="changeLang('en')">
+						<img alt="English" src="img/uk-flag.png">
+					</a>
+				</div>
+			</div>
 		</header>
 		<section id="lander">
 			<div class="box">
@@ -110,8 +110,8 @@
 		<section id="how-to" class="how-to">
 			<h2 class="en" lang="en">How to use GenderAll</h2>
 			<h2 class="no" lang="no">Hvordan bruker Genderall</h2>
-			<div id="slideshow-container">
-				<div id="slide-back">
+			<div id="slideshow-container" class="no-js">
+				<div id="slide-back" class="no-js">
 					<svg
 						version="1.1"
 						id="left-arrow"
@@ -136,7 +136,7 @@
 						</g>
 					</svg>
 				</div>
-				<div id="slideshow">
+				<div id="slideshow" class="no-js">
 					<div class="slide view" id="slide-1">
 						<div class="left">
 							<img class="en" alt="the main prompt for GenderAll" src="img/slides/en-1.png">
@@ -196,7 +196,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="slide-next">
+				<div id="slide-next" class="no-js">
 					<svg
 						version="1.1"
 						id="right-arrow"
@@ -274,7 +274,7 @@
 					<img alt="a mail letter" src="img/envelope-icon.png">
 					<h3>E-mail</h3>
 					Contact via e-mail.<br>
-					E-mail: <a href="#" onclick="dummyPrompt()" onkeypress="dummyPrompt()">genderall@stud.hioa.no</a>
+					E-mail: <a href="#" onclick="dummyPrompt()" onkeypress="dummyPrompt()">contact@genderall.com</a>
 				</div>
 			</div>
 			<div class="info no" lang="no">
@@ -295,7 +295,7 @@
 					<img alt="et brev" src="img/envelope-icon.png">
 					<h3>E-post</h3>
 					Kontakt via e-post.<br>
-					E-post: <a href="#" onclick="dummyPrompt()" onkeypress="dummyPrompt()">genderall@stud.hioa.no</a>
+					E-post: <a href="#" onclick="dummyPrompt()" onkeypress="dummyPrompt()">contact@genderall.com</a>
 				</div>
 			</div>
 		</section>
