@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		var evaluateNoJs = function() {
 			var isMobile = window.innerWidth > 1001 ? false : true;
-			console.log(isMobile);
 			var fn;
 			if (isMobile) {
 				fn = addNoJs;
@@ -65,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				window.onresize = resizeHandler;
 			}, 100);
 		};
+		evaluateNoJs();
 		window.onresize = resizeHandler;
 	}());
 	(function() {
