@@ -1,23 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	var isMobile = window.innerWidth > 1001 ? false : true;
-	var en = document.getElementById('en');
-	var no = document.getElementById('no');
-	var doc = document.documentElement;
-	no.addEventListener('click', function(){
-		this.classList.add('selected');
-		en.classList.remove('selected');
-	});
 
-	en.addEventListener('click', function() {
-		this.classList.add('selected');
-		no.classList.remove('selected');
-	});
-	window.changeLang = function(lang) {
-		if (typeof lang !== 'string' || lang.length !== 2) return;
-		doc.setAttribute('lang', lang);
-		return false; // Do not scroll the page
-	};
+	var doc = document.documentElement;
+
+	(function() {
+		// Language controller
+		var en = document.getElementById('en');
+		var no = document.getElementById('no');
+		no.addEventListener('click', function(){
+			this.classList.add('selected');
+			en.classList.remove('selected');
+		});
+
+		en.addEventListener('click', function() {
+			this.classList.add('selected');
+			no.classList.remove('selected');
+		});
+		window.changeLang = function(lang) {
+			if (typeof lang !== 'string' || lang.length !== 2) return;
+			doc.setAttribute('lang', lang);
+			return false; // Do not scroll the page
+		};
+	}());
+
 	window.dummyPrompt = function() {
 		var lang = doc.getAttribute('lang');
 		if (lang === 'en') {
