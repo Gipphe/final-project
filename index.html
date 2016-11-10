@@ -30,12 +30,12 @@
 			</nav>
 			<div class="languages">
 				<div title="Norsk">
-					<a id="no" lang="no" href="#" onclick="changeLang('no')" onkeypress="changeLang('no')">
+					<a id="no" lang="no" href="" onclick="return changeLang('no')" onkeypress="return changeLang('no')">
 						<img alt="Norsk" src="img/norwegian-flag.png">
 					</a>
 				</div>
 				<div title="English">
-					<a id="en" class="selected" href="" lang="en" onclick="changeLang('en')" onkeypress="changeLang('en')">
+					<a id="en" class="selected" href="" lang="en" onclick="return changeLang('en')" onkeypress="return changeLang('en')">
 						<img alt="English" src="img/uk-flag.png">
 					</a>
 				</div>
@@ -247,10 +247,16 @@
 			<h2 class="en" lang="en">Demo Page</h2>
 			<h2 class="no" lang="no">Demonstrasjonsside</h2>
 			<div class="en" lang="en">
-				<a href="demo.html" title="Demo page">Click to try out our demo!</a>
+				<a href="demo.html" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()" title="Demo page">
+					Click to try out our demo!
+				</a>
+				<div>(Requires JavaScript)</div>
 			</div>
 			<div class="no" lang="no">
-				<a href="demo.html" title="Demoside">Klikk for å prøve vår demo!</a>
+				<a href="demo.html" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()" title="Demoside">
+					Klikk for å prøve vår demo!
+				</a>
+				<div>(Krever JavaScript)</div>
 			</div>
 		</section>
 		<section id="contact">

@@ -34,7 +34,6 @@ footer {
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
-	min-height: 100vh;
 }
 section div {
 	line-height: 170%;
@@ -107,6 +106,7 @@ section a {
 		padding: 8%;
 	}
 }
+
 
 /* Contact section
 ------------ */
@@ -281,6 +281,36 @@ section a {
 	min-height: 200px;
 	margin: 40px 0;
 	position: static;
+}
+
+/* Demo page button
+------------ */
+#demo > div {
+	height: 200px;
+	width: 100%;
+	max-height: inherit;
+	min-height: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+#demo a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 150%;
+	width: 50%;
+	height: 50%;
+	background-color: #5C0A0C;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+#demo div div {
+	font-style: italic;
 }
 
 /* Top bar
