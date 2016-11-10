@@ -28,8 +28,7 @@ body {
 
 /* Sections
 ------------ */
-section,
-footer {
+section {
 	padding: 80px 7%;
 	box-sizing: border-box;
 	width: 100%;
@@ -425,10 +424,11 @@ header .languages .selected img {
 /* Footer
 ------------ */
 footer {
+	box-sizing: border-box;
+	padding: 20px 80px;
 	text-align: center;
 	font-size: 80%;
-	height: 200px;
-	min-height: auto;
+	height: auto;
 	color: #fff;
 	background-color: #6c7a89;
 }
