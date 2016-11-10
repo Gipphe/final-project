@@ -147,8 +147,8 @@ section a {
 /* Slideshow
 ------------ */
 #how-to {
-	padding-left: 120px;
-	padding-right: 120px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 #slideshow-container {
 	display: flex;
@@ -165,11 +165,13 @@ section a {
 	min-height: 300px;
 	display: inline-block;
 }
+#slideshow * {
+	max-height: 50vh;
+}
 #slideshow {
 	position: relative;
 	overflow: hidden;
-	width: 70%;
-	background-color: #efa15a;
+	width: 100%;
 }
 #slideshow .slide {
 	width: 100%;
@@ -189,18 +191,17 @@ section a {
 }
 #slide-back,
 #slide-next {
-	background-color: #f1ab6c;
 	display: inline-block;
 	width: 10%;
-	min-width: 50px;
+	min-width: 80px;
 	position: relative;
 	cursor: pointer;
 	transition: .5s;
 }
-#slide-back:hover img,
+/*#slide-back:hover img,
 #slide-next:hover img {
 	filter: brightness(140%);
-}
+}*/
 #slide-back:hover,
 #slide-next:hover {
 	background-color: #f4c091;
@@ -216,6 +217,8 @@ section a {
 #slideshow .slide img {
 	width: 45%;
 	margin-right: 2.5%;
+	border-radius: 8px;
+	box-shadow: 5px 0px 20px #000;
 }
 @media only screen and (max-width: 1001px) {
 	#slideshow {
