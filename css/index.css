@@ -108,6 +108,45 @@ section a {
 }
 
 
+/* GenderAll section
+------------ */
+#genderall {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+#genderall h2 {
+	width: 100%;
+}
+#genderall img {
+	max-width: 10%;
+	display: block;
+}
+#genderall div {
+	display: block;
+	max-width: 90%;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+
+@media only screen and (max-width: 1001px) {
+	#genderall {
+		flex-flow: column;
+	}
+	#genderall img,
+	#genderall div {
+		margin: 0 auto;
+		max-width: 80%;
+	}
+	#genderall div {
+		max-width: 100%;
+		width: auto;
+		padding: 0;
+		padding-top: 20px;
+	}
+}
+
 /* Contact section
 ------------ */
 #contact {
