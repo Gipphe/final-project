@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+	var isMobile = window.innerWidth > 1001 ? false : true;
 	var en = document.getElementById('en');
 	var no = document.getElementById('no');
 	var doc = document.documentElement;
@@ -60,6 +61,48 @@ document.addEventListener("DOMContentLoaded", function() {
 		window.onresize = resizeHandler;
 	}());
 	(function() {
+		// Mobile menu controller
+		var menuIcon = document.getElementById('menu-icon');
+		var nav = document.getElementsByTagName('nav')[0];
+		var compose = function() {
+			var fns = Array.prototype.slice.call(arguments);
+			return function(arg) {
+				var coll = arg;
+				for (var i = 0, len = fns.length; i < len; i += 1) {
+					coll = fns[i](coll);
+				}
+				return coll;
+			};
+		};
+		// var test = 4;
+		// var testFn = compose(function(v) {return v * 2;}, function(v) {return v + 2;});
+		// console.log(testFn(test));
+		var halt = function(e){
+			e.stopPropagation();
+			return e;
+		};
+		var showNav = function(v) {
+			nav.style.display = 'block';
+			return v;
+		};
+		var hideNav = function(v) {
+			nav.style.display = '';
+			return v;
+		};
+		var queuedHideNav = function(v) {
+			setTimeout(function() {
+				return hideNav(v);
+			}, 1);
+			return v;
+		};
+		var menuIconClickHandler = compose(halt, showNav);
+		var navClickHandler = compose(halt, queuedHideNav);
+		var docClickHandler = compose(halt, hideNav);
+		menuIcon.addEventListener('click', menuIconClickHandler);
+		nav.addEventListener('click', navClickHandler);
+		doc.addEventListener('click', docClickHandler);
+	}());
+
 	(function() {
 		if (isMobile) {
 			return;
