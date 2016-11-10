@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}());
 
 	window.dummyPrompt = function() {
+		// Dummy prompt for unimplemented features
 		var lang = doc.getAttribute('lang');
 		if (lang === 'en') {
 			window.alert('This feature is not really implemented as of yet.');
