@@ -247,9 +247,6 @@ section a {
 	-ms-user-select: none;
 	user-select: none;
 	text-align: right;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 #slideshow .slide img {
 	width: auto;
@@ -319,6 +316,42 @@ section a {
 	min-height: 200px;
 	margin: 40px 0;
 	position: static;
+}
+@media only screen and (max-width: 1001px) {
+	#slideshow.no-js .slide {
+		max-height: none;
+		display: block;
+	}
+	#slideshow.no-js .slide:before {
+		content: attr(data-slide);
+		display: block;
+		text-align: center;
+		font-size: 72pt;
+		height: auto;
+		line-height: auto;
+		margin-bottom: 45px;
+	}
+	#slideshow.no-js * {
+		max-height: none;
+	}
+
+	#slideshow.no-js .slide .left,
+	#slideshow.no-js .slide .right {
+		box-sizing: border-box;
+/*		min-height: 300px;*/
+		display: block;
+		position: static;
+		align-items: initial;
+		justify-content: initial;
+		height: auto;
+		width: 100%;
+	}
+	#slideshow.no-js .slide .left {
+		padding: 0 20px;
+	}
+	#slideshow.no-js .slide .left img {
+		display: block;
+	}
 }
 
 /* Demo page button

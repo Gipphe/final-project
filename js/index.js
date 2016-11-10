@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-	var noJs = document.getElementsByClassName('no-js');
-	noJs = Array.prototype.slice.call(noJs);
-	console.log(noJs);
-	for (var i = 0, len = noJs.length; i < len; i += 1) {
-		console.log(noJs[i]);
-		noJs[i].classList.remove('no-js');
-	}
 
 	var en = document.getElementById('en');
 	var no = document.getElementById('no');
@@ -34,38 +27,103 @@ document.addEventListener("DOMContentLoaded", function() {
 		return false;
 	};
 
-	// window.State is defined in state.js
-	var State = window.State;
-	var slideshow = document.getElementById('slideshow');
-	var slideshowWidth = slideshow.offsetWidth;
-	var slides = Array.prototype.slice.call(slideshow.children);
-	var next = document.getElementById('slide-next');
-	var back = document.getElementById('slide-back');
-	var otherSlides = slides.slice(1);
-	for (var i = 0, len = otherSlides.length; i < len; i += 1) {
-		otherSlides[i].style.left = slideshowWidth + 'px';
-	}
-	var state = State(slideshow, slides);
-	var lastButton = null;
-	state.whenNewState = function(newState, oldState) {
-		var newEl = document.getElementById(newState.id);
-		var oldEl = document.getElementById(oldState.id);
-		if (lastButton === 'back') {
-			oldEl.style.left = slideshowWidth + 'px';
+	(function() {
+		// Control no-js style classes
+		var noJs = document.getElementsByClassName('no-js');
+		noJs = Array.prototype.slice.call(noJs);
+		var addNoJs = function(el) {
+			el.classList.add('no-js');
+		};
+		var removeNoJs = function(el) {
+			el.classList.remove('no-js');
+		};
+		var evaluateNoJs = function() {
+			var isMobile = window.innerWidth > 1001 ? false : true;
+			console.log(isMobile);
+			var fn;
+			if (isMobile) {
+				fn = addNoJs;
+			} else {
+				fn = removeNoJs;
+			}
+			for (var i = 0, len = noJs.length; i < len; i += 1) {
+				fn(noJs[i]);
+			}
+		};
+		var resizeHandler = function() {
+			evaluateNoJs();
+			window.onresize = null;
+			setTimeout(function() {
+				window.onresize = resizeHandler;
+			}, 100);
+		};
+		window.onresize = resizeHandler;
+	}());
+	(function() {
+	(function() {
+		if (isMobile) {
+			return;
 		}
-		oldEl.style.opacity = '0';
-		oldEl.classList.remove('view');
-		newEl.style.left = '0';
-		newEl.style.opacity = '1';
-		newEl.classList.add('view');
-	};
-	next.addEventListener('click', function() {
-		lastButton = 'next';
-		state.next();
-	});
-	back.addEventListener('click', function() {
-		lastButton = 'back';
-		state.back();
-	});
+		// Slideshow controller
+		var State = window.State; // window.State is defined in state.js
+		var slideshow = document.getElementById('slideshow');
+		var slideshowWidth = slideshow.offsetWidth;
+		var slides = Array.prototype.slice.call(slideshow.children);
+		var next = document.getElementById('slide-next');
+		var back = document.getElementById('slide-back');
+		var otherSlides = slides.slice(1);
+		for (var i = 0, len = otherSlides.length; i < len; i += 1) {
+			otherSlides[i].style.left = slideshowWidth + 'px';
+		}
+		var state = State(slideshow, slides);
+		var lastButton = null;
+		var fadeOut = function(button) {
+			button.children[0].style.opacity = '0';
+			button.style.cursor = 'default';
+		};
+		var fadeIn = function(button) {
+			button.children[0].style.opacity = '';
+			button.style.cursor = '';
+		};
+		state.whenNewState = function(newState, oldState) {
+			// At the beginning of the slideshow
+			if (newState.id === this.states[0].id) {
+				fadeOut(back);
+			} else {
+				fadeIn(back);
+			}
+			// At the end of the slideshow
+			if (newState.id === this.states.slice(-1)[0].id) {
+				fadeOut(next);
+			} else {
+				fadeIn(next);
+			}
+			if (newState.id === oldState.id) {
+				return;
+			}
+
+			var newEl = document.getElementById(newState.id);
+			var oldEl = document.getElementById(oldState.id);
+			if (lastButton === 'back') {
+				oldEl.style.left = slideshowWidth + 'px';
+			}
+			oldEl.style.opacity = '0';
+			oldEl.classList.remove('view');
+			newEl.style.left = '0';
+			newEl.style.opacity = '1';
+			newEl.classList.add('view');
+		};
+		next.addEventListener('click', function(e) {
+			e.stopPropagation();
+			lastButton = 'next';
+			state.next();
+		});
+		back.addEventListener('click', function(e) {
+			e.stopPropagation();
+			lastButton = 'back';
+			state.back();
+		});
+		back.click();
+	}());
 });
 
