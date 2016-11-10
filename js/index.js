@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	window.changeLang = function(lang) {
 		if (typeof lang !== 'string' || lang.length !== 2) return;
 		doc.setAttribute('lang', lang);
+		return false; // Do not scroll the page
 	};
 	window.dummyPrompt = function() {
 		var lang = doc.getAttribute('lang');
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		} else {
 			window.alert('Denne funksjonen har ikke blitt implementert ennå.');
 		}
+		return false;
 	};
 
 	// window.State is defined in state.js
