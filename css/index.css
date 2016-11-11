@@ -347,11 +347,13 @@ section a {
 	justify-content: center;
 	flex-flow: column;
 }
+#slideshow.no-js * {
+	max-height: none;
+}
 #slideshow.no-js .slide {
 	opacity: 1;
 	height: auto;
-	max-height: 50vh;
-	min-height: 200px;
+	min-height: auto;
 	margin: 40px 0;
 	position: static;
 }
