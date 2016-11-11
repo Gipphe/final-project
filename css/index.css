@@ -61,10 +61,11 @@ body.rdm h3 {
 /* Sections
 ------------ */
 section {
-	padding: 80px 15%;
+	padding: 60px 15% 80px;
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
+	text-align: justify;
 }
 section div {
 	line-height: 170%;
@@ -78,19 +79,21 @@ section:nth-child(odd) {
 }
 section:nth-child(even) {
 	background-color: #EE9748;
-	color: white;
+	color: #fff;
 }
 section h2 {
 	font-size: 260%;
 	text-align: center;
+	margin-top: 0;
 }
 section a {
 	white-space: nowrap;
 }
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	section,
 	footer {
-		padding: 40px 5%;
+		text-align: left;
+		padding: 60px 5%;
 	}
 	section .title {
 		font-size: 110%;
@@ -127,7 +130,7 @@ section a {
 	line-height: initial;
 	margin: 40px 0;
 }
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	#lander h1 {
 		font-size: 4rem;
 	}
@@ -158,7 +161,7 @@ section a {
 #contact .info .category img {
 	height: 64px;
 }
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	#contact {
 		padding-left: 5%;
 		padding-right: 5%;
@@ -275,7 +278,7 @@ section a {
 #slide-back:hover svg  {
 	opacity: 1;
 }
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	#slideshow {
 		width: auto;
 	}
@@ -309,7 +312,7 @@ section a {
 	margin: 40px 0;
 	position: static;
 }
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	#slideshow.no-js .slide {
 		max-height: none;
 		display: block;
@@ -373,13 +376,13 @@ section a {
 	color: #fff;
 	font-weight: bold;
 	padding: 5px;
-	white-space: pre-wrap;
+	white-space: no-wrap;
 }
 #demo div .subtext {
 	font-style: italic;
 }
 
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	#demo a {
 		width: 80%;
 		height: auto;
@@ -513,7 +516,7 @@ header .toggles .rdm:hover #rdm-long {
 		font-size: 1rem;
 	}
 }
-@media only screen and (max-width: 1001px) {
+@media only screen and (max-width: 1023px) {
 	#menu-icon {
 		display: inline-block;
 		cursor: pointer;
