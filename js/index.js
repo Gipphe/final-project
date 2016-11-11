@@ -24,20 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
 		// Language controller
 		var en = document.getElementById('en');
 		var no = document.getElementById('no');
-		no.addEventListener('click', function(){
+		var changeLang = function(lang) {
+			if (typeof lang !== 'string' || lang.length !== 2) return;
+			doc.setAttribute('lang', lang);
+			return false; // Do not scroll the page
+		};
+		no.addEventListener('click', function() {
+			changeLang('no');
 			this.classList.add('selected');
 			en.classList.remove('selected');
 		});
 
 		en.addEventListener('click', function() {
+			changeLang('en');
 			this.classList.add('selected');
 			no.classList.remove('selected');
 		});
-		window.changeLang = function(lang) {
-			if (typeof lang !== 'string' || lang.length !== 2) return;
-			doc.setAttribute('lang', lang);
-			return false; // Do not scroll the page
-		};
 	}());
 
 	window.dummyPrompt = function() {
