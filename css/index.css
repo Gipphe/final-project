@@ -467,39 +467,48 @@ section a {
 ------------ */
 header {
 	height: 55px;
-	z-index: 1;
+	z-index: 10;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	box-sizing: border-box;
-	background-color: #34495e;
+	background-color: rgb(52,73,94);
 	padding: 0 30px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 #menu-icon {
 	display: none;
 }
-header a,
-header a:visited {
+header nav {
+	height: inherit;
+	width: auto;
+	box-sizing: border-box;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header nav a,
+header nav a:visited {
 	transition: text-shadow .2s;
 	color: #fff;
 	text-decoration: none;
 }
-header nav {
-	width: auto;
-	box-sizing: border-box;
-	white-space: nowrap;
-}
 header nav a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	box-sizing: border-box;
 	white-space: inherit;
 	padding: 0 10px;
+	height: inherit;
+	transition: .2s;
 }
 header nav a:hover {
-	text-shadow: 0 0 10px rgba(255,255,255,0.7);
+	background-color: #6084a7;
 }
 header .toggles {
 	position: absolute;
@@ -598,18 +607,24 @@ header .toggles .rdm:hover #rdm-long {
 		margin: 6px 0;
 	}
 	header nav {
+		margin-top: -1px;
 		display: none;
 		position: absolute;
 		top: 100%;
 		left: 0;
-		background-color: #34495e;
+		background-color: rgb(52,73,94);
 		width: 100%;
-		text-align: center;
+		text-align: left;
 		font-size: 1.7rem;
+		height: auto;
 	}
 	header nav a {
-		padding: 12px 0;
+		padding: 12px 60px;
 		display: block;
+		transition: .2s;
+	}
+	header nav a:hover {
+		background-color: #6084a7;
 	}
 }
 
