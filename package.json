@@ -1,0 +1,7 @@
+{
+  "version": "0.1.0",
+  "name": "genderall",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}
