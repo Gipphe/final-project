@@ -8,9 +8,8 @@
 	height="72"
 	viewBox="0 0 24 72"
 	xml:space="preserve">
-	<g id="left-arrow">
+	<g>
 		<path
-			fill="#2f1e0e"
 			d="
 			M 11 0
 			L 0 36
