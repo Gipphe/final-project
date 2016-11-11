@@ -140,6 +140,32 @@ section a {
 	}
 }
 
+#genderall {
+	background-image: url(../img/cover2.jpg);
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	text-align: center;
+}
+#genderall .subtitle {
+	text-align: center;
+	font-style: italic;
+	font-size: 1.3rem;
+}
+#genderall * {
+	z-index: 2;
+	position: relative;
+}
+#genderall .background-layer {
+	background-color: rgba(1, 191, 157, 0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
 /* Contact section
 ------------ */
 #contact {
@@ -181,8 +207,25 @@ section a {
 /* Slideshow
 ------------ */
 #how-to {
+	position: relative;
+	background-image: url(../img/cover6.jpg);
+	background-size: cover;
+	background-position: center;
 	padding-left: 0px;
 	padding-right: 0px;
+}
+#how-to .background-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(51,181,197,0.5);
+	z-index: 1;
+}
+#how-to * {
+	z-index: 2;
+	position: relative;
 }
 #slideshow-container {
 	display: flex;
@@ -203,7 +246,7 @@ section a {
 #slideshow,
 #slide-back,
 #slide-next {
-	background-color: #efa15a;
+	background-color: rgba(0,0,0,0.2);
 }
 #slideshow * {
 	max-height: 50vh;
@@ -248,7 +291,7 @@ section a {
 	max-width: 100%;
 	margin-right: 2.5%;
 	border-radius: 8px;
-	box-shadow: 5px 0px 20px #000;
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.6);
 }
 #slideshow .view {
 	opacity: 1;
@@ -313,6 +356,13 @@ section a {
 	position: static;
 }
 @media only screen and (max-width: 1023px) {
+	#how-to {
+		background-image: none;
+		background-color: transparent;
+	}
+	#how-to .background-layer {
+		background-color: rgb(51,181,197);
+	}
 	#slideshow.no-js .slide {
 		max-height: none;
 		display: block;
@@ -352,6 +402,26 @@ section a {
 
 /* Demo page button
 ------------ */
+
+#demo {
+	background-image: url(../img/cover1.jpg);
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+#demo * {
+	position: relative;
+	z-index: 2;
+}
+#demo .background-layer {
+	background-color: rgba(238, 151, 72, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
 #demo > div {
 	height: 200px;
 	width: 100%;
