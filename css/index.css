@@ -48,7 +48,7 @@ h1, h2, h3 {
 /* Sections
 ------------ */
 section {
-	padding: 80px 7%;
+	padding: 80px 15%;
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
@@ -327,6 +327,7 @@ section a {
 	}
 	#slideshow.no-js .slide .left {
 		padding: 0 20px;
+		margin-bottom: 20px;
 	}
 	#slideshow.no-js .slide .left img {
 		display: block;
@@ -369,6 +370,10 @@ section a {
 	#demo a {
 		width: 80%;
 		height: auto;
+	}
+	#demo a div {
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -467,6 +472,7 @@ header .languages .selected img {
 		font-size: 1.7rem;
 	}
 	header nav a {
+		padding: 12px 0;
 		display: block;
 	}
 }
