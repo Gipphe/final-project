@@ -99,10 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				return coll;
 			};
 		};
-		// var test = 4;
-		// var testFn = compose(function(v) {return v * 2;}, function(v) {return v + 2;});
-		// console.log(testFn(test));
-		var halt = function(e){
+		var halt = function(e) {
 			e.stopPropagation();
 			return e;
 		};
@@ -120,7 +117,29 @@ document.addEventListener("DOMContentLoaded", function() {
 			}, 1);
 			return v;
 		};
-		var menuIconClickHandler = compose(halt, showNav);
+		var isNavVisible = function() {
+			var style = nav.style.display;
+			if (style === '') {
+				return window.getComputedStyle(nav).display !== 'none';
+			}
+			return style !== 'none';
+		};
+		var evalShowHide = function() {
+			if (isNavVisible()) {
+				return false;
+			} else {
+				return true;
+			}
+		};
+		var showHideNav = function(show) {
+			if (show) {
+				showNav();
+			} else {
+				hideNav();
+			}
+			return show;
+		};
+		var menuIconClickHandler = compose(halt, evalShowHide, showHideNav);
 		var navClickHandler = compose(halt, queuedHideNav);
 		var docClickHandler = compose(halt, hideNav);
 		menuIcon.addEventListener('click', menuIconClickHandler);
