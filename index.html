@@ -33,14 +33,22 @@
 				<a class="en" lang="en" href="#contact">Contact</a>
 				<a class="no" lang="no" href="#contact">Kontakt</a>
 			</nav>
-			<div class="languages">
-				<div title="Norsk">
-					<a id="no" lang="no" href="" onclick="return changeLang('no')" onkeypress="return changeLang('no')">
+			<div class="toggles">
+				<div class="rdm" onclick="return toggleRDM()" onkeypress="return toggleRDM()">
+					<a id="rdm-short" href="" class="rdm-text" onclick="return false" onkeypress="return false">
+						RDM
+					</a>
+					<a id="rdm-long" href="" class="rdm-text" onclick="return false" onkeypress="return false">
+						Reading Disability Mode
+					</a>
+				</div>
+				<div class="lang" title="Norsk">
+					<a id="no" lang="no" href="no.html" onclick="return false" onkeypress="return false">
 						<img alt="Norsk" src="img/norwegian-flag.png">
 					</a>
 				</div>
-				<div title="English">
-					<a id="en" class="selected" href="" lang="en" onclick="return changeLang('en')" onkeypress="return changeLang('en')">
+				<div class="lang" title="English">
+					<a id="en" class="selected" href="index.html" lang="en" onclick="return false" onkeypress="return false">
 						<img alt="English" src="img/uk-flag.png">
 					</a>
 				</div>

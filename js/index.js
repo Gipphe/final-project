@@ -3,6 +3,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	var isMobile = window.innerWidth > 1001 ? false : true;
 
 	var doc = document.documentElement;
+	var body = document.body;
+
+	(function() {
+		// Reading Disability Mode
+		var rdm = document.getElementsByClassName('rdm')[0];
+		window.toggleRDM = function() {
+			if (body.classList.contains('rdm')) {
+				body.classList.remove('rdm');
+				rdm.classList.remove('active');
+			} else {
+				body.classList.add('rdm');
+				rdm.classList.add('active');
+			}
+			return false;
+		};
+	}());
 
 	(function() {
 		// Language controller

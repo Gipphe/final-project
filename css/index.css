@@ -44,6 +44,19 @@ body {
 h1, h2, h3 {
 	font-family: 'Raleway', 'Lato', sans-serif;
 }
+body.rdm * {
+	font-family: 'OpenDyslexic', 'Comic Sans MS', 'Lato', sans-serif;
+	background-image: none !important;
+}
+body.rdm section:nth-child(odd) {
+	background-color: #FEF6F0;
+	color: #272561;
+}
+body.rdm h1,
+body.rdm h2,
+body.rdm h3 {
+	font-family: 'OpenDyslexic', 'Comic Sans MS', 'Raleway', sans-serif;
+}
 
 /* Sections
 ------------ */
@@ -87,7 +100,7 @@ section a {
 /* Lander section
 ------------ */
 #lander {
-	background-image: url('../img/cover4_genderall.jpg');
+	background-image: url('../img/cover4_genderall.jpg') !important;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -415,34 +428,84 @@ header nav a {
 header nav a:hover {
 	text-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
-header .languages {
+header .toggles {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	height: 20px;
+	height: 55px;
 	right: 20px;
 	margin: 0 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-header .languages div {
+header .toggles .lang {
+	height: 20px;
+}
+header .toggles div {
 	margin: 0 5px;
-	display: inline-block;
+	display: block;
 	height: inherit;
 }
-header .languages div a {
+header .toggles div a {
 	display: block;
 	cursor: pointer;
 	height: inherit;
 }
-header .languages div a img {
+header .toggles div a img {
 	display: block;
 	opacity: 0.7;
 	filter: grayscale(100%);
 	border-radius: 6%;
 	height: inherit;
 }
-header .languages .selected img {
+header .toggles .selected img {
 	opacity: 1;
 	filter: none;
+}
+/* Reading Disability Mode */
+header .toggles .rdm {
+	position: relative;
+	font-family: 'OpenDyslexic', 'Lato', sans-serif;
+}
+header .toggles .rdm .rdm-text {
+	transition: .3s;
+	text-align: right;
+	position: absolute;
+	color: #fff;
+	height: 100%;
+	padding: 2px;
+	box-sizing: border-box;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .toggles .rdm.active .rdm-text {
+	background-color: #FEF6F0;
+	color: #272561;
+}
+header .toggles .rdm .rdm-text,
+header .toggles .rdm .rdm-text:visited {
+/*	color: inherit;*/
+	text-decoration: none;
+}
+header .toggles .rdm #rdm-long {
+	opacity: 0;
+	right: 0;
+	/*white-space: nowrap;*/
+	font-size: 8pt;
+	text-align: center;
+}
+header .toggles .rdm #rdm-short {
+	right: 0;
+	z-index: 1;
+}
+header .toggles .rdm:hover #rdm-short {
+	opacity: 0;
+}
+header .toggles .rdm:hover #rdm-long {
+	opacity: 1;
 }
 
 @media only screen and (max-width: 1340px) and (min-width: 1002px) {
