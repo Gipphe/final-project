@@ -1,3 +1,5 @@
 *.sublime-project
 *.sublime-workspace
 no.html
+secret.json
+node_modules

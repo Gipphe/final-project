@@ -76,9 +76,6 @@ section .title {
 }
 section:nth-child(odd) {
 	background-color: #FFF;
-	background-image: url(../img/bakgrunntile.png);
-	background-repeat: repeat;
-	background-position: center center;
 }
 section:nth-child(even) {
 	background-color: #EE9748;

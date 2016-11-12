@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GenderAll</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="icon" href="img/Logo-360.png" type="image/icon" />
+		<style>
+			section:nth-child(odd) {
+				background-image: url(../img/tiles.svg);
+				background-repeat: repeat;
+				background-position: center center;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="menu-icon">
+				<div class="bar-1"></div>
+				<div class="bar-2"></div>
+				<div class="bar-3"></div>
+			</div>
+			<nav id="list">
+				<a class="en" lang="en" href="#top">Home</a>
+				<a class="no" lang="no" href="#top">Hjem</a>
+				<a class="en" lang="en" href="#problem">The Problem</a>
+				<a class="no" lang="no" href="#problem">Problemet</a>
+				<a class="en" lang="en" hreF="#genderall">GenderAll</a>
+				<a class="no" lang="no" href="#genderall">GenderAll</a>
+				<a class="en" lang="en" href="#how-genderall-works">How it works</a>
+				<a class="no" lang="no" href="#how-genderall-works">Hvordan det fungerer</a>
+				<a class="en" lang="en" href="#how-to">How to use it</a>
+				<a class="no" lang="no" href="#how-to">Hvordan bruke</a>
+				<a class="en" lang="en" href="#future">Future Possibilities</a>
+				<a class="no" lang="no" href="#future">Fremtidige Muligheter</a>
+				<a class="en" lang="en" href="#demo">Demo Page</a>
+				<a class="no" lang="no" href="#demo">Demoside</a>
+				<a class="en" lang="en" href="#contact">Contact</a>
+				<a class="no" lang="no" href="#contact">Kontakt</a>
+			</nav>
+			<div class="toggles">
+				<div class="rdm" onclick="return toggleRDM()" onkeypress="return toggleRDM()">
+					<a id="rdm-short" href="" class="rdm-text" onclick="return false" onkeypress="return false">
+						RDM
+					</a>
+					<a id="rdm-long" href="" class="rdm-text" onclick="return false" onkeypress="return false">
+						Reading Disability Mode
+					</a>
+				</div>
+				<div class="lang" title="Norsk">
+					<a id="no" lang="no" href="no.html" onclick="return false" onkeypress="return false">
+						<img alt="Norsk" src="img/norwegian-flag.png">
+					</a>
+				</div>
+				<div class="lang" title="English">
+					<a id="en" class="selected" href="index.html" lang="en" onclick="return false" onkeypress="return false">
+						<img alt="English" src="img/uk-flag.png">
+					</a>
+				</div>
+			</div>
+		</header>
+		<section id="lander">
+			<div class="box">
+				<h1>GenderAll</h1>
+				<div class="en" lang="en">
+					<p class="title">The freedom to choose your own identity</p>
+				</div>
+				<div class="no" lang="no">
+					<p class="title">Friheten til å velge din egen identitet</p>
+				</div>
+			</div>
+		</section>
+		<section id="problem">
+			<h2 class="en" lang="en">The Problem</h2>
+			<h2 class="no" lang="no">Problemet</h2>
+			<div class="en" lang="en">
+				<p>
+					In today's modern society, there is no longer only two defined genders. In the United States alone, approximately <a class="source" href="http://williamsinstitute.law.ucla.edu/wp-content/uploads/How-Many-Adults-Identify-as-Transgender-in-the-United-States.pdf">1.4 million</a> people define themselves as neither male nor female. Although the majority of our world’s population do not exist in this category, universal design to us means including everyone, also this minority. Nevertheless, large international online services, such as Google and Instagram, still offers the same basic gender options, which in no way represents the variation among us humans. We consider the lack of modern alternatives a significant social problem, since it excludes a significant amount of people. Having to forcefully identify yourself as something you do not feel like, may to many cause discomfort and negatively affect the overall quality of life.
+				</p>
+				<p>
+					The gender debate has however become more relevant in recent years and some social media like Facebook and Tumblr currently provides users the ability to customize their gender. This possibility is unfortunately not particularly common, something we want to change with GenderAll.
+				</p>
+			</div>
+			<div class="no" lang="no">
+				<p>
+					I dagens moderne samfunn finnes det ikke lenger bare to definerte kjønn. Bare i USA lever det omlag <a class="source" href="http://williamsinstitute.law.ucla.edu/wp-content/uploads/How-Many-Adults-Identify-as-Transgender-in-the-United-States.pdf">1.4 millioner</a> mennesker som verken definerer seg selv som mann eller kvinne. Selv om majoriteten ikke inngår i denne kategorien, handler universelt design om å inkludere så mange som mulig, også mindretallet. Likevel tilbyr fortsatt store internasjonale nettjenester, som Google og Instagram, et mangelfullt utvalg alternativer, som på ingen måte representerer variasjonen blant oss mennesker. Vi anser mangelen på slike alternativer som et betydelig sosialt problem, ettersom det ekskluderer en betydelig mengde mennesker. Når en må identifisere seg selv som noe en ikke føler er riktig, kan det for mange oppstå ubehag og negativt påvirke den generelle livskvaliteten.
+				</p>
+				<p>
+					Kjønnsdebatten har dog blitt mer aktuell de siste årene og enkelte sosiale medier som Facebook og Tumblr gir i dag brukerne muligheten til å egendefinere kjønnet sitt. Denne muligheten er dessverre ikke spesielt utbredt, noe vi ønsker å endre med GenderAll.
+				</p>
+			</div>
+		</section>
+		<section id="genderall">
+			<h2>GenderAll</h2>
+			<div class="background-layer"></div>
+			<p class="subtitle en">
+				With GenderAll we desire to give all people the opportunity to express their own gender online
+			</p>
+			<p class="subtitle no">
+				Med GenderAll ønsker vi å gi alle mennesker muligheten til å kunne uttrykke sitt eget kjønn på internett
+			</p>
+			<div class="en" lang="en">
+				We believe everyone should be able to define and change their gender identity on the web, through a simple application and across all platforms. GenderAll allows for this while easily being implemented in existing designs. It can be used effortlessly by anyone who desires this solution. GenderAll provides the freedom to choose your own identity.
+			</div>
+			<div class="no" lang="no">
+				Via et enkelt brukergrensesnitt skal man kunne definere og endre sitt kjønn på tvers av alle plattformer. GenderAll skal enkelt kunne implementeres i allerede eksisterende design og lettvint benyttes av alle som har behov for alternativene. Dette gir en større frihet for brukerne som har nytte for denne applikasjonen.
+			</div>
+		</section>
+		<section id="how-genderall-works">
+			<h2 class="en" lang="en">How it works</h2>
+			<h2 class="no" lang="no">Hvordan det fungerer</h2>
+			<div class="en" lang="en">
+				<p>
+					New users will for the first time be presented with GenderAll through the process of editing or creating new profiles on social media. A GenderAll option will be available alongside the regular male/female alternatives, making sure not to replace the old model, but only to add functionality and options to it. The user can here search through existing gender titles or specify their own.
+				</p>
+				<p>
+					Users will from here have the opportunity to create a GenderAll profile with their specified gender, enabling the same preferences to be used on all supported sites. If the user already has a profile, and the browser remember previous logins, this profile will automatically be suggested.
+				</p>
+				<p>
+					To some users gender identity may vary with time. Therefore, we offer a dedicated page that enables the user to change their chosen gender. You can also add or adjust more attributes as intensity, external anatomy and relevant gender features. The changes will then be saved and all associated websites be updated. There is an increasing problem with keeping your information private on the internet. That is why we have an option to choose how much information you want so share on your profile.
+				</p>
+			</div>
+			<div class="no" lang="no">
+				<p>
+					Brukerens første møte med vår løsning vil være gjennom prosessen med å opprette nye profiler på sosiale medier. Der man i dag har begrensede muligheter for valg av kjønn, vil et nytt alternativ med navnet GenderAll dukke opp. Her kan brukeren velge mellom flere eksisterende kjønn eller opprette sitt eget.
+				</p>
+				<p>
+					Brukeren vil videre få muligheten til å opprette en GenderAll profil med det valgte kjønnet(evt. flere), slik at den samme profilen kan benyttes på flere nettsider. Har brukeren allerede en eksisterende profil vil man kunne logge inn med denne. Om nettleseren i tillegg har lagret kontoinformasjon til denne profilen ved tidligere bruk, vil GenderAll bli foreslått som førstevalg.
+				</p>
+				<p>
+					For mange vil kjønnsidentiteten kunne variere med tid. Vi tilbyr derfor en egen nettside som gir brukeren mulighet til å endre sitt valgte kjønn. Her kan også flere attributter legges inn som intensitet, ytre anatomi og liknende. Endringene vil deretter lagres og alle tilknyttede profiler bli oppdatert. Det er i dag en stor utfordring å holde informasjonen sin privat på internett. På kontoen din kan du velge hvor mye informasjon du vil gi ut om deg selv.
+				</p>
+			</div>
+		</section>
+		<section id="how-to">
+			<div class="background-layer"></div>
+			<h2 class="en" lang="en">How to use it</h2>
+			<h2 class="no" lang="no">Hvordan å bruke den</h2>
+			<div id="slideshow-container" class="no-js">
+				<div id="slide-back" class="no-js">
+					<svg
+						version="1.1"
+						id="left-arrow"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						width="24"
+						height="72"
+						viewBox="0 0 24 72"
+						xml:space="preserve">
+						<g>
+							<path
+								d="
+								M 11 0
+								L 0 36
+								L 11 72
+								L 24 72
+								L 13 36
+								L 24 0
+								z
+								">
+							</path>
+						</g>
+					</svg>
+				</div>
+				<div id="slideshow" class="no-js">
+					<div class="slide view" id="slide-1" data-slide="1">
+						<div class="left">
+							<img class="en" alt="the main prompt for GenderAll" src="img/slides/en-1.gif">
+							<img class="no" alt="hovedboksen for GenderAll" src="img/slides/no-1.gif">
+						</div>
+						<div class="right">
+							<div class="en">
+								This is the first box our users will be presented with. You will here be asked to specify your gender. The “Ok” button confirms your choice and you are done. If you want to save this gender specification to be used with other sites or you already have a profile, you can press the “Sign in” text.
+							</div>
+							<div class="no">
+								Dette er det første bildet våre brukere vil møte på. Her vil du spesifisere ditt kjønn. “Ok” knappen bekrefter valget ditt og du er ferdig. Om du ønsker å lagre din kjønnsspesifikasjon slik at den kan brukes på andre sider, eller du allerede har en profil, kan du trykke “Eller logg inn med din profil”.
+							</div>
+						</div>
+					</div>
+					<div class="slide" id="slide-2" data-slide="2">
+						<div class="left">
+							<img class="en" alt="the sign in box for GenderAll" src="img/slides/en-2.gif">
+							<img class="no" alt="logg inn boksen for GenderAll" src="img/slides/no-2.gif">
+						</div>
+						<div class="right">
+							<div class="en">
+								In this box, you will have the option to sign in with an already existing GenederAll-profile or to create a new one. If you do have a profile, but do not remember your password, the “Forgot your pasword” text will take you to our main GenderAll webpage and resolve the case there.
+							</div>
+							<div class="no">
+								Her vil du få muligheten til å logge inn med din allerede eksisterende GenderAll-profil, samt opprette en ny en. Hvis du har en profil, men ikke husker innloggingsinformasjonen, vil du ved å trykke på “Glemt passordet?” teksten bli tatt videre til vår GenderAll nettside, hvor saken løses.
+							</div>
+						</div>
+					</div>
+					<div class="slide" id="slide-3" data-slide="3">
+						<div class="left">
+							<img class="en" alt="GenderAll prompting the user for more information in regards to creating a GenderAll account" src="img/slides/en-3.gif">
+							<img class="no" alt="Innloggingsboksen krever mer informasjon av brukeren for å lage en GenderAll-konto" src="img/slides/no-3.gif">
+						</div>
+						<div class="right">
+							<div class="en">
+								After clicking on “sign up” on the previous image, you are prompted to fill out your desired gender and to create your account. To keep your information saved we need your E-mail and a password of your choosing. After you have filled out the form, click “confirm” and your new profile will be created! You can also click on “Exit” to get to the previous image.
+							</div>
+							<div class="no">
+								Etter at du har trykket på “opprett bruker” på de forrige bilde vil du bli bedt om å skrive inn ditt kjønn i den øverste boksen. For å beholde informasjonen din lagret trenger vi din e-mail og et passord. Etter du har fylt ut alle boksene klikk på “Register” og profilen din har blitt lagret! Du kan også klikke på “Tilbake” for å gå tilbake til forrige bilde.
+							</div>
+						</div>
+					</div>
+					<div class="slide"  id="slide-4" data-slide="4">
+						<div class="left">
+							<img class="en" alt="final GenderAll view before accepting your gender specification" src="img/slides/en-4.png">
+							<img class="no" alt="siste GenderAll visning før du aksepterer din kjønnsspesifikasjon" src="img/slides/no-4.png">
+						</div>
+						<div class="right">
+							<div class="en">
+								You have now either created a profile or logged in, as showed by the E-mail in the upper right hand corner. From here, you can update and change your preferred gender if need be and press ok. You are now done and can proceed with the remaining form.
+							</div>
+							<div class="no">
+								Du har nå enten laget en profil eller logget inn med din eksisterende konto som vist øverst i høyre hjørnet. Her kan du oppdatere profilen din og forandre ditt kjønn. Trykk så “ok” for å få det lagret. Du er nå ferdig og kan fortsette med det du holdt på med.
+							</div>
+						</div>
+					</div>
+					<div class="slide" id="slide-5" data-slide="5">
+						<div class="left">
+							<img class="en" alt="facebook registration with GenderAll login" src="img/slides/en-5.png">
+							<img class="no" alt="facebook registrering med GenderAll login" src="img/slides/no-5.png">
+						</div>
+						<div class="right">
+							<p class="en">
+								This picture shows how our solution could be integrated on Facebook. It is easily recognisable by its signature color and its simple design. The box will appear below the already visible gender menu when the GenderAll option is selected.
+							</p>
+							<p class="no">
+								Dette bildet viser hvordan applikasjonen vår vises på Facebook. Den er lett gjenkjennelig med sin signaturfarge og dens enkle design. Boksen vil komme frem når du velger GenderAll- alternativet.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="slide-next" class="no-js">
+					<svg
+						version="1.1"
+						id="right-arrow"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						width="24"
+						height="72"
+						viewBox="0 0 24 72"
+						xml:space="preserve">
+						<g>
+							<path
+								d="
+								M 13 0
+								L 24 36
+								L 13 72
+								L 0 72
+								L 11 36
+								L 0 0
+								z
+								">
+							</path>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</section>
+		<section id="future">
+			<h2 class="en" lang="en">Future Possibilities</h2>
+			<h2 class="no" lang="no">Fremtidige Muligheter</h2>
+			<div class="en" lang="en">
+				<p>
+					To begin with, our solution solves the current gender alternative problem. But being a free user-generating platform makes new and exciting possibilities available in the long run. Offering a relatively small application in the beginning, opens up multiple paths of expansion later. We can judge by the amount of users we gain and evaluate the market for new connected services building on the fundamental idea of a highly personalized profile. This could be a social media platform, a more diverse dating site or a forum where people can meet and discuss topics around their gender and identity.
+				</p>
+				<p>
+					As running a growing service like GenderAll will have some administration and server cost, and our solution at this stage don’t have any practical way of generating income, some type of expansion will be necessary. One way could be through tailor-made advertisements on future services. This option may however discourage people from using our sites and will have to be optional through profile settings. A positive side to this approach is that we keep our services free of charge, as opposed to relying on user donations or a subscription-based income.
+				</p>
+			</div>
+			<div class="no" lang="no">
+				<p>
+					Til å begynne med løser GenderAll det foreløpige problemet med manglende kjønnsalternativer. Men ettersom løsningen er en gratis og brukergenererende tjeneste, åpner det seg nye og spennende muligheter i det lengre løp. Ved å tilby en liten tjeneste i starten, er mulighetene mange for videre utviding av konseptet. Vi kan via brukermassen vurdere interessen for nye tilknyttede tjenester som alle bygger videre på den fundamentale ideen om en særdeles personlig brukerprofil. Tjenestene kan eksempelvis være en ny sosial medieplattform, en mer mangfoldig og inkluderende dating-tjeneste eller et forum der brukerne kan møtes og diskutere temaer tilknyttet kjønn og identitet.
+				</p>
+				<p>
+					Siden en voksende tjeneste som GenderAll vil ha utgifter knyttet til drift og administrasjon, og vår løsning per dags dato ikke har noen inntekter, vil en tjenesteutvidning bli nødvendig. Et av alternativene er via skreddersydd reklame på framtidige tjenester. Denne muligheten kan på den ene siden drive brukerne våre bort, så reklame må kunne deaktiveres via profilinnstillinger. På den andre siden holder vi tjenestene våre gratis, til motsetning fra et system som avhenger av donasjoner eller abonnementer.
+				</p>
+			</div>
+		</section>
+		<section id="demo">
+			<div class="background-layer"></div>
+			<h2 class="en" lang="en">Demo Page</h2>
+			<h2 class="no" lang="no">Demonstrasjonsside</h2>
+			<div class="en" lang="en">
+				<a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()" title="Demo page">
+					<div>Click to try out our demo!</div>
+				</a>
+				<div class="subtext">(Requires JavaScript)</div>
+			</div>
+			<div class="no" lang="no">
+				<a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()" title="Demoside">
+					<div>Klikk for å prøve vår demo!</div>
+				</a>
+				<div class="subtext">(Krever JavaScript)</div>
+			</div>
+		</section>
+		<section id="contact">
+			<h2 class="en" lang="en">Contact</h2>
+			<h2 class="no" lang="no">Kontakt</h2>
+			<div class="info en" lang="en">
+				<div class="category">
+					<img alt="a map" src="img/map-icon.png">
+					<h3>Location</h3>
+					Oslo and Akershus University College of Applied Sciences<br>
+					PO Box 4 St. Olavs plass<br>
+					0130 Oslo, Norway
+				</div>
+				<div class="category">
+					<img alt="a mobile phone" src="img/phone-icon.png">
+					<h3>Telephone</h3>
+					Phone: +47 12 34 56 78
+				</div>
+				<div class="category">
+					<img alt="a mail letter" src="img/envelope-icon.png">
+					<h3>E-mail</h3>
+					E-mail: <a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()">contact@genderall.com</a>
+				</div>
+			</div>
+			<div class="info no" lang="no">
+				<div class="category">
+					<img alt="et kart" src="img/map-icon.png">
+					<h3>Sted</h3>
+					Høgskolen i Oslo og Akershus<br>
+					Postboks 4 St. Olavs plass<br>
+					0130 Oslo, Norge
+				</div>
+				<div class="category">
+					<img alt="en mobiltelefon" src="img/phone-icon.png">
+					<h3>Telefon</h3>
+					Telefon: +47 12 34 56 78
+				</div>
+				<div class="category">
+					<img alt="et brev" src="img/envelope-icon.png">
+					<h3>E-post</h3>
+					E-post: <a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()">contact@genderall.com</a>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="en" lang="en">
+				<p>©2016 Genderall Inc.</p>
+				<p>Created by N. Nanthawisit, C. Arntzen, A.Reinholt, V. Bakke, N. Johansen and J. Iversen.</p>
+			</div>
+			<div class="no" lang="no">
+				<p>©2016 Genderall Inc.</p>
+				<p>Skapt av N. Nanthawisit, C. Arntzen, A.Reinholt, V. Bakke, N. Johansen og J. Iversen.</p>
+			</div>
+		</footer>
+		<script src="js/state.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
