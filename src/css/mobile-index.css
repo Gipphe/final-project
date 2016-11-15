@@ -1,0 +1,140 @@
+/* Sections
+------------ */
+section,
+footer {
+	text-align: left;
+	padding: 60px 5%;
+}
+section .title {
+	font-size: 110%;
+}
+section h2 {
+	font-size: 220%;
+}
+
+/* Main lander
+------------ */
+#lander h1 {
+	font-size: 4rem;
+}
+#lander .box {
+	width: 100vw;
+	padding: 8%;
+}
+
+/* Contact section
+------------ */
+#contact {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+#contact .info {
+	flex-flow: column;
+}
+#contact .info .category {
+	width: 100%;
+	margin-bottom: 25px;
+}
+#contact .info .category:last-child {
+	margin-bottom: 0px;
+}
+
+/* Slideshow
+------------ */
+#slideshow {
+	width: auto;
+}
+
+/* Slideshow no-js
+------------ */
+#how-to {
+	background-image: none;
+	background-color: transparent;
+}
+#how-to .background-layer {
+	background-color: rgb(51,181,197);
+}
+#slideshow.no-js .slide {
+	max-height: none;
+	display: block;
+}
+#slideshow.no-js .slide::before {
+	content: attr(data-slide);
+	display: block;
+	text-align: center;
+	font-size: 72pt;
+	height: auto;
+	line-height: auto;
+	margin-bottom: 45px;
+}
+#slideshow.no-js * {
+	max-height: none;
+}
+
+#slideshow.no-js .slide .left,
+#slideshow.no-js .slide .right {
+	box-sizing: border-box;
+	display: block;
+	position: static;
+	align-items: initial;
+	justify-content: initial;
+	height: auto;
+	width: 100%;
+}
+#slideshow.no-js .slide .left {
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+#slideshow.no-js .slide .left img {
+	display: block;
+}
+
+/* Demo page button
+------------ */
+#demo a {
+	width: 80%;
+	height: auto;
+}
+#demo a div {
+	width: 100%;
+	height: 100%;
+}
+
+/* Top bar
+------------ */
+#menu-icon {
+	display: inline-block;
+	cursor: pointer;
+}
+#menu-icon div {
+	width: 35px;
+	height: 5px;
+	background-color: #fff;
+	margin: 6px 0;
+}
+header nav {
+	margin-top: -1px;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgb(52,73,94);
+	width: 100%;
+	text-align: left;
+	font-size: 1.7rem;
+	height: auto;
+}
+header nav a {
+	padding: 12px 60px;
+	display: block;
+	transition: .2s;
+}
+header nav a:hover {
+	background-color: #6084a7;
+}
+
+/* Footer
+------------ */
+footer {
+	text-align: center;
+}

@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1023px)" href="css/mobile-index.css">
 		<link rel="icon" href="img/Logo-360.png" type="image/icon" />
 	</head>
 	<body>
@@ -34,14 +35,6 @@
 				<a class="no" lang="no" href="#contact">Kontakt</a>
 			</nav>
 			<div class="toggles">
-				<div class="rdm" onclick="return toggleRDM()" onkeypress="return toggleRDM()">
-					<a id="rdm-short" href="" class="rdm-text" onclick="return false" onkeypress="return false">
-						RDM
-					</a>
-					<a id="rdm-long" href="" class="rdm-text" onclick="return false" onkeypress="return false">
-						Reading Disability Mode
-					</a>
-				</div>
 				<div class="lang" title="Norsk">
 					<a id="no" lang="no" href="no.html" onclick="return false" onkeypress="return false">
 						<img alt="Norsk" src="img/norwegian-flag.png">
@@ -281,15 +274,15 @@
 			<h2 class="en" lang="en">Demo Page</h2>
 			<h2 class="no" lang="no">Demonstrasjonsside</h2>
 			<div class="en" lang="en">
-				<a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()" title="Demo page">
-					<div>Click to try out our demo!</div>
-				</a>
+				<button class="demo-button" onclick="dummyPrompt()" onkeypress="dummyPrompt()">
+					Click to try out our demo!
+				</button>
 				<div class="subtext">(Requires JavaScript)</div>
 			</div>
 			<div class="no" lang="no">
-				<a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()" title="Demoside">
-					<div>Klikk for å prøve vår demo!</div>
-				</a>
+				<button class="demo-button" onclick="dummyPrompt()" onkeypress="dummyPrompt()">
+					Klikk for å prøve vår demo!
+				</button>
 				<div class="subtext">(Krever JavaScript)</div>
 			</div>
 		</section>
@@ -307,12 +300,12 @@
 				<div class="category">
 					<img alt="a mobile phone" src="img/phone-icon.png">
 					<h3>Telephone</h3>
-					Phone: +47 12 34 56 78
+					+47 12 34 56 78
 				</div>
 				<div class="category">
 					<img alt="a mail letter" src="img/envelope-icon.png">
 					<h3>E-mail</h3>
-					E-mail: <a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()">contact@genderall.com</a>
+					<a href="#" onclick="return dummyPrompt()" onkeypress="return dummyPrompt()">contact@genderall.com</a>
 				</div>
 			</div>
 			<div class="info no" lang="no">
