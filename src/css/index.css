@@ -17,9 +17,8 @@ body {
 	font-size: 110%;
 	font-family: 'Lato', sans-serif;
 	line-height: 1.5;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-size: 18pt;
-	font-weight: bold;
 }
 body * {
 	line-height: 2em;
@@ -37,9 +36,6 @@ section {
 	width: 100%;
 	height: auto;
 	text-align: justify;
-}
-section div {
-
 }
 section .title {
 	font-size: 150%;
@@ -348,6 +344,7 @@ section a {
 /* Top bar
 ------------ */
 header {
+	font-weight: normal;
 	height: 55px;
 	z-index: 10;
 	position: fixed;
