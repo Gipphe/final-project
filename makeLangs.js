@@ -1,11 +1,12 @@
 /* jshint node:true, esnext: true */
 const fs = require('fs');
+const cheerio = require('cheerio');
 
-let main = fs.readFileSync('src/index.html', 'utf8');
+const main = fs.readFileSync('src/index.html', 'utf8');
+const $ = cheerio.load(main);
 
-main = main
-	.replace(/<html lang="en">/, '<html lang="no">')
-	.replace(/class="selected" /, '')
-	.replace(/<a id="no" lang="no" href="no.html"/, '<a id="no" lang="no" class="selected" href="no.html"');
+$('#en').removeClass('selected');
+$('#no').addClass('selected');
+$('html').attr('lang', 'no');
 
-fs.writeFileSync('src/no.html', main);
+fs.writeFileSync('src/no.html', $.html());

@@ -2,6 +2,7 @@
   "version": "0.1.0",
   "name": "genderall",
   "devDependencies": {
+    "cheerio": "^0.22.0",
     "grunt": "^1.0.1",
     "grunt-shell": "^2.1.0"
   }
