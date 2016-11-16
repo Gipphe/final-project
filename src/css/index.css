@@ -51,7 +51,7 @@ body * {
 }
 h1, h2, h3 {
 	font-family: 'Raleway', 'Lato', sans-serif;
-	line-height: initial;
+	line-height: normal;
 }
 
 /* Sections
@@ -110,7 +110,7 @@ section a {
 }
 #lander h1 {
 	font-size: 9rem;
-	line-height: initial;
+	line-height: normal;
 	margin: 40px 0;
 }
 
@@ -272,7 +272,6 @@ section a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 25%;
-	fill: #fff;
 	opacity: 0.3;
 	transition: .5s;
 	height: 72px;
@@ -468,7 +467,7 @@ footer {
 	text-align: center;
 	font-size: 12pt;
 	font-weight: normal;
-	line-height: inital;
+	line-height: normal;
 	height: auto;
 	color: #fff;
 	background-color: rgb(52,73,94);
