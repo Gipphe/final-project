@@ -67,7 +67,7 @@ section .title {
 	font-size: 150%;
 }
 section:nth-child(odd) {
-	background-color: #FEF6F0;
+	background-color: rgb(255,250,245);
 	color: #272561;
 }
 section:nth-child(even) {
