@@ -464,11 +464,12 @@ footer {
 	box-sizing: border-box;
 	padding: 20px 140px;
 	text-align: center;
-	font-size: 16pt;
+	font-size: 12pt;
 	font-weight: normal;
+	line-height: inital;
 	height: auto;
 	color: #fff;
-	background-color: #6c7a89;
+	background-color: rgb(52,73,94);
 }
 
 /* Translations
