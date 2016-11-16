@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	var doc = document.documentElement;
 	var body = document.body;
 
+	var compose = function() {
+		var fns = Array.prototype.slice.call(arguments);
+		return function(arg) {
+			var coll = arg;
+			for (var i = 0, len = fns.length; i < len; i += 1) {
+				coll = fns[i](coll);
+			}
+			return coll;
+		};
+	};
+
 	(function() {
 		// Language controller
 		var en = document.getElementById('en');
@@ -74,16 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		// Mobile menu controller
 		var menuIcon = document.getElementById('menu-icon');
 		var nav = document.getElementsByTagName('nav')[0];
-		var compose = function() {
-			var fns = Array.prototype.slice.call(arguments);
-			return function(arg) {
-				var coll = arg;
-				for (var i = 0, len = fns.length; i < len; i += 1) {
-					coll = fns[i](coll);
-				}
-				return coll;
-			};
-		};
+
 		var halt = function(e) {
 			e.stopPropagation();
 			return e;
@@ -205,6 +207,29 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		});
 		back.click();
+	}());
+
+	(function() {
+		// Image modal
+		var modal = document.getElementById('image-modal');
+		var imageEl = modal.children[0];
+
+		var halt = function(e) { e.stopPropagation(); return e; };
+
+		var zoomables = document.getElementsByClassName('zoomable');
+		var imgClickHandle = compose(halt, function(e) {
+			var img = e.target;
+			var src = img.getAttribute('src');
+			imageEl.setAttribute('src', src);
+			modal.style.display = 'flex';
+		});
+
+		Array.prototype.forEach.call(zoomables, function(img) {
+			img.addEventListener('click', imgClickHandle);
+		});
+		modal.addEventListener('click', compose(halt, function() {
+			modal.style.display = 'none';
+		}));
 	}());
 });
 
