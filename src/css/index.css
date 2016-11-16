@@ -320,7 +320,8 @@ section a {
 	max-width: 80vw;
 	font-size: inherit;
 	margin: 0;
-	padding: 5px;
+	padding: 40px;
+	font-size: 20pt;
 	background-color: #5C0A0C;
 	border-radius: 10px;
 	color: #fff;
