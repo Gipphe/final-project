@@ -149,6 +149,7 @@ header nav {
 	font-size: 1.7rem;
 	height: auto;
 	overflow: scroll;
+	max-height: calc(100vh - 55px);
 }
 header nav a {
 	padding: 10px 0;
