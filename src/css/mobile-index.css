@@ -112,6 +112,9 @@ section h2 {
 	background-color: #fff;
 	margin: 6px 0;
 }
+header {
+	font-size: 12pt;
+}
 header nav {
 	margin-top: -1px;
 	display: none;

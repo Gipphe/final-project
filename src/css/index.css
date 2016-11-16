@@ -38,14 +38,16 @@
 
 body {
 	margin: 0;
-	font-size: 110%;
 	font-family: 'APHont', 'Lato', sans-serif;
 	line-height: 1.5;
 	letter-spacing: 1px;
-	font-size: 18pt;
+	/* Font size at 14pt because people who require larger font sizes increase
+	 * the size through their browser for all web pages regardless */
+	font-size: 14pt;
 }
 body * {
 	line-height: 2em;
+	font-size: 100%;
 }
 h1, h2, h3 {
 	font-family: 'Raleway', 'Lato', sans-serif;
@@ -198,7 +200,7 @@ section a {
 #slideshow .slide {
 	max-height: 700px;
 	height: 70vh;
-	min-height: 400px;
+	/*min-height: 400px;*/
 	display: inline-block;
 }
 #slideshow,
@@ -207,7 +209,7 @@ section a {
 	background-color: rgba(0,0,0,0.2);
 }
 #slideshow * {
-	max-height: 50vh;
+	/*max-height: 50vh;*/
 	box-sizing: border-box;
 }
 #slideshow {
@@ -369,7 +371,7 @@ section a {
 ------------ */
 header {
 	font-weight: normal;
-	font-size: 13pt;
+	font-size: 12pt;
 	height: 55px;
 	z-index: 10;
 	position: fixed;
