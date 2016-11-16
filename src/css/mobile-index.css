@@ -128,7 +128,9 @@ header nav {
 	height: auto;
 }
 header nav a {
-	padding: 12px 60px;
+	padding: 10px 0;
+	line-height: initial;
+	text-align: center;
 	display: block;
 	transition: .2s;
 }
