@@ -11,11 +11,35 @@
 	font-weight: 400;
 	src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato-extended.woff2) format('woff2');
 }
+@font-face {
+	font-family: 'APHont';
+	font-style: normal;
+	font-weight: normal;
+	src: local('APHont'), url(../fonts/APHont-Regular_q15c.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'APHont';
+	font-style: italic;
+	font-weight: normal;
+	src: local('APHont'), url(../fonts/APHont-Italic_q15c.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'APHont';
+	font-style: italic;
+	font-weight: bold;
+	src: local('APHont'), url(../fonts/APHont-BoldItalic_q15c.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'APHont';
+	font-style: normal;
+	font-weight: bold;
+	src: local('APHont'), url(../fonts/APHont-Bold_q15c.ttf) format('truetype');
+}
 
 body {
 	margin: 0;
 	font-size: 110%;
-	font-family: 'Lato', sans-serif;
+	font-family: 'APHont', 'Lato', sans-serif;
 	line-height: 1.5;
 	letter-spacing: 1px;
 	font-size: 18pt;
@@ -41,7 +65,8 @@ section .title {
 	font-size: 150%;
 }
 section:nth-child(odd) {
-	background-color: #FFF;
+	background-color: #FEF6F0;
+	color: #272561;
 }
 section:nth-child(even) {
 	background-color: #EE9748;
@@ -345,6 +370,7 @@ section a {
 ------------ */
 header {
 	font-weight: normal;
+	font-size: 13pt;
 	height: 55px;
 	z-index: 10;
 	position: fixed;
