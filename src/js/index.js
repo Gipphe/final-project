@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
 	var isMobile = window.innerWidth > 1001 ? false : true;
 
 	var doc = document.documentElement;
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var isNavVisible = function() {
 			var style = nav.style.display;
 			if (style === '') {
-				return window.getComputedStyle(nav).display !== 'none';
+				style = window.getComputedStyle(nav).display;
 			}
 			return style !== 'none';
 		};
