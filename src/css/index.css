@@ -45,7 +45,7 @@ body {
 	 * the size through their browser for all web pages regardless */
 	font-size: 14pt;
 }
-body * {
+body > * {
 	line-height: 2em;
 	font-size: 100%;
 }
@@ -282,40 +282,8 @@ section a {
 	opacity: 1;
 }
 
-/* Slideshow no-js
------------- */
-#slideshow-container.no-js,
-#slideshow.no-js {
-	background-color: transparent;
-	display: block;
-	height: inherit;
-	max-height: inherit;
-	min-height: inherit;
-}
-#slide-next.no-js,
-#slide-back.no-js {
-	display: none;
-}
-#slideshow.no-js {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-flow: column;
-}
-#slideshow.no-js * {
-	max-height: none;
-}
-#slideshow.no-js .slide {
-	opacity: 1;
-	height: auto;
-	min-height: auto;
-	margin: 40px 0;
-	position: static;
-}
-
 /* Demo page button
 ------------ */
-
 #demo {
 	background-image: url(../img/cover1.jpg);
 	background-size: cover;
@@ -479,12 +447,6 @@ header .toggles div a img {
 header .toggles .selected img {
 	opacity: 1;
 	filter: none;
-}
-
-@media only screen and (max-width: 1340px) and (min-width: 1002px) {
-	header nav {
-		font-size: 1rem;
-	}
 }
 
 /* Footer

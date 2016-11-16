@@ -1,0 +1,33 @@
+/* Slideshow no-js
+------------ */
+#slideshow-container.no-js,
+#slideshow.no-js {
+	background-color: transparent;
+	display: block;
+	height: inherit;
+	max-height: inherit;
+	min-height: inherit;
+}
+#slide-next.no-js,
+#slide-back.no-js {
+	display: none;
+}
+#slideshow.no-js {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+#slideshow.no-js * {
+	max-height: none;
+}
+#slideshow.no-js .slide {
+	opacity: 1;
+	height: auto;
+	min-height: auto;
+	margin: 40px 0;
+	position: static;
+}
+#slideshow.no-js .zoomable {
+	cursor: inherit;
+}

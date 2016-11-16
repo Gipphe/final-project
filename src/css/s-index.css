@@ -41,12 +41,6 @@ section h2 {
 
 /* Slideshow
 ------------ */
-#slideshow {
-	width: auto;
-}
-
-/* Slideshow no-js
------------- */
 #how-to {
 	background-image: none;
 	background-color: transparent;
@@ -54,11 +48,38 @@ section h2 {
 #how-to .background-layer {
 	background-color: rgb(51,181,197);
 }
-#slideshow.no-js .slide {
+#slideshow-container,
+#slideshow {
+	background-color: transparent;
+	display: block;
+	height: inherit;
+	max-height: inherit;
+	min-height: inherit;
+}
+#slide-next,
+#slide-back {
+	display: none;
+}
+#slideshow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	width: auto;
+}
+#slideshow * {
+	max-height: none;
+}
+#slideshow .slide {
+	opacity: 1;
+	height: auto;
+	min-height: auto;
+	margin: 40px 0;
+	position: static;
 	max-height: none;
 	display: block;
 }
-#slideshow.no-js .slide::before {
+#slideshow .slide::before {
 	content: attr(data-slide);
 	display: block;
 	text-align: center;
@@ -67,12 +88,12 @@ section h2 {
 	line-height: auto;
 	margin-bottom: 45px;
 }
-#slideshow.no-js * {
+#slideshow * {
 	max-height: none;
 }
 
-#slideshow.no-js .slide .left,
-#slideshow.no-js .slide .right {
+#slideshow .slide .left,
+#slideshow .slide .right {
 	box-sizing: border-box;
 	display: block;
 	position: static;
@@ -81,13 +102,14 @@ section h2 {
 	height: auto;
 	width: 100%;
 }
-#slideshow.no-js .slide .left {
+#slideshow .slide .left {
 	padding: 0 20px;
 	margin-bottom: 20px;
 }
-#slideshow.no-js .slide .left img {
+#slideshow .slide .left img {
 	display: block;
 }
+
 
 /* Demo page button
 ------------ */

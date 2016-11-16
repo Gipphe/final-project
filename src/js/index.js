@@ -53,34 +53,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		// Control no-js style classes
 		var noJs = document.getElementsByClassName('no-js');
 		noJs = Array.prototype.slice.call(noJs);
-		var addNoJs = function(el) {
-			el.classList.add('no-js');
-		};
-		var removeNoJs = function(el) {
-			el.classList.remove('no-js');
-		};
-		var evaluateNoJs = function() {
-			var isMobile = window.innerWidth > 1001 ? false : true;
-			var fn;
-			if (isMobile) {
-				fn = addNoJs;
-			} else {
-				fn = removeNoJs;
-			}
-			for (var i = 0, len = noJs.length; i < len; i += 1) {
-				fn(noJs[i]);
-			}
-		};
-		var resizeHandler = function() {
-			evaluateNoJs();
-			window.onresize = null;
-			setTimeout(function() {
-				window.onresize = resizeHandler;
-			}, 100);
-		};
-		evaluateNoJs();
-		window.onresize = resizeHandler;
+		for (var i = 0, len = noJs.length; i < len; i += 1) {
+			noJs[i].classList.remove('no-js');
+		}
 	}());
+
 	(function() {
 		// Mobile menu controller
 		var menuIcon = document.getElementById('menu-icon');
