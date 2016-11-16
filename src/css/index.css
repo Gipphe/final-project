@@ -265,8 +265,8 @@ section a {
 	transition: .5s;
 }
 
-#slide-next svg,
-#slide-back svg {
+#slide-next img,
+#slide-back img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -275,9 +275,11 @@ section a {
 	fill: #fff;
 	opacity: 0.3;
 	transition: .5s;
+	height: 72px;
+	width: 24px;
 }
-#slide-next:hover svg,
-#slide-back:hover svg  {
+#slide-next:hover img,
+#slide-back:hover img  {
 	opacity: 1;
 }
 
