@@ -9,13 +9,13 @@ section .title {
 	font-size: 110%;
 }
 section h2 {
-	font-size: 220%;
+	font-size: 42px;
 }
 
 /* Main lander
 ------------ */
 #lander h1 {
-	font-size: 4rem;
+	font-size: 64px;
 }
 #lander .box {
 	width: 100vw;
@@ -126,6 +126,7 @@ header nav {
 	text-align: left;
 	font-size: 1.7rem;
 	height: auto;
+	overflow: scroll;
 }
 header nav a {
 	padding: 10px 0;
