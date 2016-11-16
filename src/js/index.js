@@ -6,21 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	var body = document.body;
 
 	(function() {
-		// Reading Disability Mode
-		var rdm = document.getElementsByClassName('rdm')[0];
-		window.toggleRDM = function() {
-			if (body.classList.contains('rdm')) {
-				body.classList.remove('rdm');
-				rdm.classList.remove('active');
-			} else {
-				body.classList.add('rdm');
-				rdm.classList.add('active');
-			}
-			return false;
-		};
-	}());
-
-	(function() {
 		// Language controller
 		var en = document.getElementById('en');
 		var no = document.getElementById('no');
