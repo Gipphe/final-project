@@ -195,6 +195,15 @@ document.addEventListener("DOMContentLoaded", function() {
 			lastButton = 'back';
 			state.back();
 		});
+		document.addEventListener('keydown', function(e) {
+			var left = 37;
+			var right = 39;
+			if (e.keyCode === left) {
+				back.click();
+			} else if (e.keyCode === right) {
+				next.click();
+			}
+		});
 		back.click();
 	}());
 });
