@@ -19,22 +19,30 @@ document.addEventListener("DOMContentLoaded", function() {
 		// Language controller
 		var en = document.getElementById('en');
 		var no = document.getElementById('no');
+		var halt = function(e) {e.stopPropagaion(); return e;};
 		var changeLang = function(lang) {
 			if (typeof lang !== 'string' || lang.length !== 2) return;
 			doc.setAttribute('lang', lang);
 			return false; // Do not scroll the page
 		};
-		no.addEventListener('click', function() {
-			changeLang('no');
-			this.classList.add('selected');
-			en.classList.remove('selected');
-		});
-
-		en.addEventListener('click', function() {
-			changeLang('en');
-			this.classList.add('selected');
-			no.classList.remove('selected');
-		});
+		var piper = function(val) {
+			return function(){
+				return val;
+			};
+		};
+		var changeSelected = function(lang) {
+			if (lang === 'no') {
+				no.classList.add('selected');
+				en.classList.remove('selected');
+			} else {
+				en.classList.add('selected');
+				no.classList.remove('selected');
+			}
+		};
+		var noClickHandle = compose(halt, piper('no'), changeLang, changeSelected);
+		var enClickHandle = compose(halt, piper('en'), changeLang, changeSelected);
+		no.addEventListener('click', noClickHandle);
+		en.addEventListener('click', enClickHandle);
 	}());
 
 	(function() {
