@@ -2,7 +2,9 @@
   "globals": {
     "window": false,
     "document": false,
-    "console": true
+    "console": false,
+    "ask": false,
+    "say": false
   },
   "nonew": true,
   "unused": true,
