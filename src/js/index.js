@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		var en = document.getElementById('en');
 		var no = document.getElementById('no');
 		var halt = function(e) {
-			console.log(e);
 			e.stopPropagation();
 			return e;
 		};
