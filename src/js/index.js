@@ -19,11 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		// Language controller
 		var en = document.getElementById('en');
 		var no = document.getElementById('no');
-		var halt = function(e) {e.stopPropagaion(); return e;};
+		var halt = function(e) {
+			console.log(e);
+			e.stopPropagation();
+			return e;
+		};
 		var changeLang = function(lang) {
-			if (typeof lang !== 'string' || lang.length !== 2) return;
-			doc.setAttribute('lang', lang);
-			return false; // Do not scroll the page
+			if (typeof lang === 'string' || lang.length === 2) {
+				doc.setAttribute('lang', lang);
+			}
+			return lang;
 		};
 		var piper = function(val) {
 			return function(){
