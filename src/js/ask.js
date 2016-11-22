@@ -59,11 +59,45 @@
 			head.appendChild(node);
 		}
 	};
+	var question = {};
+	question.for = function(deps) {
+		this.depLength = deps.length;
+		var res = [];
+		for (var i = 0, leni = deps.length; i < leni; i += 1) {
+			var depName = deps[i];
+			res.push(cache[depName]);
+		}
+		this.deps = res;
 
-	var say = function(name, fn) {
+		return this;
+	};
+	question.in = function(fn) {
+		this.callback = fn;
+
+		return this;
+	};
+	question.when = {};
+	question.when.ready = function() {
+		window.addEventListener('DOMContentLoaded', function() {
+			this.loadedCallback();
+		});
+		return this;
+	}.bind(question);
+	question.when.now = function() {
+		this.callback.apply(null, this.deps);
+	}.bind(question);
+
+	var ask = function(deps, cb) {
+		this.for(deps);
+		this.in(cb);
+		this.when.now();
+	};
+	ask.prototype = Object.create(question);
+
+	var answer = function(name, fn) {
 		cache[name] = fn;
 	};
 
 	window.ask = ask;
-	window.say = say;
+	window.answer = answer;
 }());

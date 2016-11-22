@@ -4,7 +4,7 @@
     "document": false,
     "console": false,
     "ask": false,
-    "say": false
+    "answer": false
   },
   "nonew": true,
   "unused": true,

@@ -1,4 +1,4 @@
-say('utils', function() {
+answer('utils', function() {
 	var self = {};
 	self.compose = function() {
 		var fns = Array.prototype.slice.call(arguments);
