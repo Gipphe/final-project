@@ -132,9 +132,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	}());
 
 	(function() {
-		if (isMobile) {
-			return;
-		}
 		// Slideshow controller
 		var State = window.State; // window.State is defined in state.js
 		var slideshow = document.getElementById('slideshow');
