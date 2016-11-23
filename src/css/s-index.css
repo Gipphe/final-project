@@ -148,7 +148,7 @@ header nav {
 	text-align: left;
 	font-size: 1.7rem;
 	height: auto;
-	overflow: scroll;
+	overflow: auto;
 	max-height: calc(100vh - 55px);
 }
 header nav a {
