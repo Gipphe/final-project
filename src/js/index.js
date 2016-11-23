@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (lastButton === 'back') {
 				oldEl.style.left = slideshowWidth + 'px';
 			}
-			oldEl.style.opacity = '0';
+			oldEl.style.opacity = '';
 			oldEl.classList.remove('view');
 			newEl.style.left = '0';
 			newEl.style.opacity = '1';
