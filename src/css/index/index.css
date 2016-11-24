@@ -1,35 +1,3 @@
-/* Font declaration */
-@font-face {
-	font-family: 'Raleway';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Raleway'), local('Raleway-Regular'), url(../fonts/raleway-extended.woff2) format('woff2');
-}
-@font-face {
-	font-family: 'APHont';
-	font-style: normal;
-	font-weight: normal;
-	src: local('APHont'), url(../fonts/APHont-Regular_q15c.ttf) format('truetype');
-}
-@font-face {
-	font-family: 'APHont';
-	font-style: italic;
-	font-weight: normal;
-	src: local('APHont'), url(../fonts/APHont-Italic_q15c.ttf) format('truetype');
-}
-@font-face {
-	font-family: 'APHont';
-	font-style: italic;
-	font-weight: bold;
-	src: local('APHont'), url(../fonts/APHont-BoldItalic_q15c.ttf) format('truetype');
-}
-@font-face {
-	font-family: 'APHont';
-	font-style: normal;
-	font-weight: bold;
-	src: local('APHont'), url(../fonts/APHont-Bold_q15c.ttf) format('truetype');
-}
-
 body {
 	margin: 0;
 	font-family: 'APHont', 'Lato', sans-serif;
