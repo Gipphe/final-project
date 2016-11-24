@@ -1,8 +1,6 @@
 (function() {
 	// Gender input control
 
-	var genderInput = function(el) {this.el = el;};
-	var genderList = function(el) {this.el = el;};
 	var genderInput = document.getElementById('gender-input');
 	var genderList = document.getElementById('gender-list');
 
@@ -22,25 +20,12 @@
 		}
 		return res;
 	};
-	genderList.prototype.setDisplay = function(el, val) {
+
+	var setDisplay = function(el, val) {
 		el.style.display = val;
 	};
-	genderList.prototype.setListDisplay = function(val) {
-		this.setDisplay(genderList, val);
-	};
-
-	var flow = function() {
-		var args = arguments;
-		var i = 0;
-		var len = args.length;
-
-		return function(arg) {
-			var acc = arg;
-			for (; i < len; i += 1) {
-				acc = args[i](acc);
-			}
-			return acc;
-		};
+	var setListDisplay = function(val) {
+		setDisplay(genderList, val);
 	};
 
 	var hideList = function(e) {
