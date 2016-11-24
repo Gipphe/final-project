@@ -3,15 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	var compose = window.utils.compose; // Defined in utils.js
 
 	(function() {
-		// Control no-js style classes
-		var noJs = document.getElementsByClassName('no-js');
-		noJs = Array.prototype.slice.call(noJs);
-		for (var i = 0, len = noJs.length; i < len; i += 1) {
-			noJs[i].classList.remove('no-js');
-		}
-	}());
-
-	(function() {
 		// Mobile menu controller
 		var menuIcon = document.getElementById('menu-icon');
 		var nav = document.getElementsByTagName('nav')[0];
