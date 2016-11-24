@@ -3,17 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	var doc = document.documentElement;
 	var body = document.body;
-
-	var compose = function() {
-		var fns = Array.prototype.slice.call(arguments);
-		return function(arg) {
-			var coll = arg;
-			for (var i = 0, len = fns.length; i < len; i += 1) {
-				coll = fns[i](coll);
-			}
-			return coll;
-		};
-	};
+	var compose = window.utils.compose; // Defined in utils.js
 
 	(function() {
 		// Language controller
