@@ -17,7 +17,8 @@
 	};
 	var toggleButton = function(button) {
 		var currState = state.state;
-		if (!validators[currState.id]()) {
+		var nextState = state.getNextState();
+		if (!validators[currState.id]() || !nextState) {
 			dimButton(button);
 		} else {
 			undimButton(button);
