@@ -48,7 +48,7 @@ section a {
 /* Lander section
 ------------ */
 #lander {
-	background-image: url('../img/cover4_genderall.jpg') !important;
+	background-image: url('../../img/cover4_genderall.jpg') !important;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -79,7 +79,7 @@ section a {
 /* GenderAll section
 ------------ */
 #genderall {
-	background-image: url(../img/cover2.jpg);
+	background-image: url(../../img/cover2.jpg);
 	background-size: cover;
 	background-position: center center;
 	position: relative;
@@ -130,7 +130,7 @@ section a {
 ------------ */
 #how-to {
 	position: relative;
-	background-image: url(../img/cover6.jpg);
+	background-image: url(../../img/cover6.jpg);
 	background-size: cover;
 	background-position: center;
 	padding-left: 0px;
@@ -247,7 +247,7 @@ section a {
 /* Demo page button
 ------------ */
 #demo {
-	background-image: url(../img/cover1.jpg);
+	background-image: url(../../img/cover1.jpg);
 	background-size: cover;
 	background-position: center center;
 	position: relative;
