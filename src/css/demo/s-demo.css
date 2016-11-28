@@ -1,0 +1,28 @@
+body {
+	font-size: 20pt;
+}
+
+/* Slides
+------------ */
+.slide .mid {
+	width: 90vw;
+}
+
+/* Main lander
+------------ */
+#main h1 {
+	font-size: 72pt;
+}
+
+/* Slide input box
+------------ */
+.slide input[type=text],
+.slide input[type=password] {
+	font-size: 100%;
+}
+
+/* Header
+------------ */
+.header {
+	height: 80px;
+}
