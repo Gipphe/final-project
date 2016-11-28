@@ -16,7 +16,10 @@
 			next.innerHTML = 'Next';
 		}
 	});
-	next.addEventListener('click', function() {
-		state.next();
+	next.addEventListener('click', function(e) {
+		var nextState = state.next();
+		if (nextState.id === 'account-created') {
+			window.GenderAll.accountCreatedHandle();
+		}
 	});
 }());
