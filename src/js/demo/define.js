@@ -53,6 +53,8 @@
 		cursor.style.display = 'block';
 		cursor.style.left = String(x - cursorXOffset) + 'px';
 		cursor.style.top = String(y - cursorYOffset) + 'px';
+
+		window.GenderAll.graph = [near5X, near5Y];
 	};
 	graph.addEventListener('mousedown', function() {
 		graph.addEventListener('mousemove', handleClick);
