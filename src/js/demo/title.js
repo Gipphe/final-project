@@ -88,6 +88,7 @@
 	};
 	var setTitle = function() {
 		window.GenderAll.title = genderInput.value;
+		window.GenderAll.validate();
 	};
 
 	var genderListClickHandle = compose(halt, setInputValue, hideList, resetSelected, setTitle);
@@ -114,11 +115,17 @@
 		var showThese = filterList(function(val) {
 			var html = val.innerHTML.toLowerCase();
 			var inputValue = genderInput.value.toLowerCase();
+			if (!inputValue.length) {
+				return true;
+			}
 			return html.includes(inputValue);
 		});
 		var hideThese = filterList(function(val) {
 			var html = val.innerHTML.toLowerCase();
 			var inputValue = genderInput.value.toLowerCase();
+			if (!inputValue.length) {
+				return false;
+			}
 			return !html.includes(inputValue);
 		});
 		hideThese.forEach(function(el) {
@@ -194,4 +201,8 @@
 	genderInput.addEventListener('click', function(e) { e.stopPropagation(); });
 	// Hide the gender list if a click event bubbles up to #main
 	document.getElementById('title').addEventListener('click', hideList);
+
+	window.GenderAll.validators.title = function() {
+		return window.GenderAll.title && window.GenderAll.title.length ? true : false;
+	};
 }());

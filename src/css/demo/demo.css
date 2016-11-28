@@ -86,47 +86,6 @@ h1, h2, h3, h4, h5, h6 {
 	width: 300px;
 }
 
-/* Controls
------------- */
-#controls {
-	position: fixed;
-	bottom: 30vh;
-	left: 20vw;
-	width: 60vw;
-}
-#controls #back,
-#controls #next {
-	position: absolute;
-	top: 0;
-
-	background-color: #eee;
-	border-radius: 2px;
-	box-sizing: content-box;
-	color: #888;
-	cursor: pointer;
-	height: 32px;
-	line-height: 32px;
-	padding: 3px 10px;
-	text-align: center;
-	transition: text-shadow .3s, color .3s;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	width: 64px;
-}
-#controls #back {
-	left: 0;
-}
-#controls #next {
-	right: 0;
-}
-#controls #back:hover,
-#controls #next:hover {
-	color: #333;
-	text-decoration: inherit;
-	text-shadow: 0 0 5px rgba(0,0,0,0.3);
-}
 
 /* Gender selection box
 ------------ */
@@ -271,6 +230,51 @@ h1, h2, h3, h4, h5, h6 {
 	left: -999999px;
 	overflow: hidden;
 	display: block;
+}
+
+/* Controls
+------------ */
+#controls {
+	position: fixed;
+	bottom: 30vh;
+	left: 20vw;
+	width: 60vw;
+}
+#controls #back,
+#controls #next {
+	position: absolute;
+	top: 0;
+
+	background-color: #eee;
+	border-radius: 2px;
+	box-sizing: content-box;
+	color: #888;
+	cursor: pointer;
+	height: 32px;
+	line-height: 32px;
+	padding: 3px 10px;
+	text-align: center;
+	transition: text-shadow .3s, color .3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 64px;
+}
+#controls #back {
+	left: 0;
+}
+#controls #next {
+	right: 0;
+}
+#controls #back:hover:not(.dimmed),
+#controls #next:hover:not(.dimmed) {
+	color: #333;
+	text-decoration: inherit;
+	text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+#controls .dimmed {
+	opacity: 0.5 !important;
 }
 
 /* Page map

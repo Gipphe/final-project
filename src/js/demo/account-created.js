@@ -12,4 +12,5 @@
 		genderTitle.innerHTML = title;
 		genderSlides.innerHTML = defined[0] + ', ' + defined[1];
 	};
+	window.GenderAll.validators['account-created'] = function(){return true;};
 }());

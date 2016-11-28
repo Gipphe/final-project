@@ -55,6 +55,7 @@
 		cursor.style.top = String(y - cursorYOffset) + 'px';
 
 		window.GenderAll.graph = [near5X, near5Y];
+		window.GenderAll.validate();
 	};
 	graph.addEventListener('mousedown', function() {
 		graph.addEventListener('mousemove', handleClick);
@@ -75,5 +76,8 @@
 			}
 			slider.style.display = display === 'block' ? 'none' : 'block';
 		});
+	};
+	window.GenderAll.validators.define = function() {
+		return window.GenderAll.graph && window.GenderAll.graph.length === 2 ? true : false;
 	};
 }());
