@@ -143,16 +143,19 @@
 		</div>
 		<!--
 			Yes, multiple external script tags are detrimental to page loading
-			time, but the size of the demo.js script because unbearably large
+			time, but the size of the demo.js script became unbearably large
 			for human reading.
 			In a proper production environment, module systems like browserify,
-			RequireJS or ES7 import/export statements are advisable.
+			RequireJS, SystemJS or ES7 import/export statements are advisable.
 		-->
 		<script src="js/shared/utils.js"></script>
 		<script src="js/shared/state.js"></script>
 		<script src="js/shared/language-controller.js"></script>
-		<script src="js/demo/gender-input.js"></script>
-		<script src="js/demo/gender-graph.js"></script>
+		<script src="js/demo/initGenderAll.js"></script>
+		<script src="js/demo/title.js"></script>
+		<script src="js/demo/define.js"></script>
+		<script src="js/demo/sign-up.js"></script>
+		<script src="js/demo/account-created.js"></script>
 		<script src="js/demo/page-controls.js"></script>
 		<script src="js/demo.js"></script>
 	</body>
