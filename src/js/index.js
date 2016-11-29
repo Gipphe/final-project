@@ -149,5 +149,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			modal.style.display = 'none';
 		}));
 	}());
+
+	(function() {
+		// Navigation
+		window.navigate = function(url) {
+			window.location.href = url;
+		};
+	}());
 });
 
