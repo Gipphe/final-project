@@ -10,4 +10,4 @@ module.exports = (grunt) ->
 			makeLangs: 'node makeLangs'
 
 	grunt.loadNpmTasks 'grunt-shell'
-	grunt.registerTask 'default', ['shell:makeLangs', 'shell:push']
+	grunt.registerTask 'default', [] #['shell:makeLangs', 'shell:push']
