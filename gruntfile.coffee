@@ -6,7 +6,7 @@ module.exports = (grunt) ->
 		shell:
 			options:
 				stderr: false
-			push: 'pscp -r -pw <%= secret.pw %> src\\ s237590@studssh.cs.hioa.no:www/final/'
+			#push: 'pscp -r -pw <%= secret.pw %> src\\ foobar-s237590@studssh.cs.hioa.no:www/final/'
 			makeLangs: 'node makeLangs'
 
 	grunt.loadNpmTasks 'grunt-shell'
